@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 20px;
+}
+.divider {
+    height: 1px;
+    background-color: #ccc;
+    margin: 20px 0;
+    margin-bottom: 20px;
+    border-radius: 50%;
+}
+.practice div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+    gap: 50px;
+}
+
