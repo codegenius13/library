@@ -12,13 +12,13 @@ const Home = () => {
             </p>
             <hr className='divider' />
             <p>Click below to view exercises.</p>
-            {/*<div className="practice">
+            <div className="practice">
                 <div>
-                    <p><strong>Tumour Suppressor Gene (TP53)</strong></p>
+                    <p><strong>Plant Research Studies</strong></p>
                     <Link to="/practice-one">[Open]</Link>
                 </div>
                 <p>3 exercises</p>
-            </div>*/}
+            </div>
         </div>
     )
 }

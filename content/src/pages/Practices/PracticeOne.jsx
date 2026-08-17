@@ -4,15 +4,15 @@ import { Link } from 'react-router-dom'
 const PracticeOne = () => {
   return (
     <div>
-      <h3>Tumour Suppressor Gene (TP53)</h3>
-      <p>Select an exercise for TP53 gene analysis</p>
+      <h3>Plant Research Studies</h3>
+      <p>Select an exercise for plant research analysis</p>
       <hr className='divider' />
       <div className="practice">
         <div>
-          <p><strong>Exercise 1: Plasmid Construction and Expression</strong> </p>
+          <p><strong>Exercise 1: Maize Environmental Stress–to–Metabolic Response Analysis</strong> </p>
           <Link to="/exercise-one">[Open]</Link>
         </div>
-        <p>Summary: Describing the process of constructing plasmids for TP53 gene analysis and their expression in mammalian cells.</p>
+        <p>Summary: Analyzing the metabolic responses of maize plants under different environmental stress conditions.</p>
       </div>
     </div>
   )
