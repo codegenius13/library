@@ -1,0 +1,213 @@
+==========================================================
+MAIZE RNA-SEQ QUALITY ASSESSMENT AND
+METABOLIC RESPONSE FRAMEWORK
+==========================================================
+
+PROJECT:
+Maize Environmental Stress–to–Metabolic Response Analysis
+
+ORGANISM:
+Zea mays (B73)
+
+DATA SOURCE:
+NCBI SRA
+Project: PRJNA335771 / SRP080208
+
+CONTROL SAMPLES:
+    SRR3984708
+    SRR3984749
+
+==========================================================
+1. INPUT DATA
+==========================================================
+
+INPUT_DIR = "01_raw_data/"
+
+CONTROL_READS = [
+    "SRR3984708_1.fastq.gz",
+    "SRR3984708_2.fastq.gz",
+    "SRR3984749_1.fastq.gz",
+    "SRR3984749_2.fastq.gz"
+]
+
+# Paired-end RNA-seq reads
+# R1 = forward reads
+# R2 = reverse reads
+
+
+==========================================================
+2. QUALITY CONTROL
+==========================================================
+
+FOR each file IN CONTROL_READS:
+
+    RUN FastQC
+
+    INPUT:
+        file
+
+    OUTPUT:
+        FastQC HTML report
+        FastQC ZIP report
+
+    SAVE reports TO:
+        "02_QC/"
+
+
+==========================================================
+3. MULTI-SAMPLE QC SUMMARY
+==========================================================
+
+RUN MultiQC
+
+INPUT:
+    "02_QC/"
+
+OUTPUT:
+    "03_MultiQC/multiqc_report.html"
+
+
+==========================================================
+4. QC METRICS ASSESSED
+==========================================================
+
+ASSESS:
+
+    sequence_quality
+    GC_content
+    adapter_content
+    sequence_duplication
+    sequence_count
+
+COMPARE:
+
+    SRR3984708
+    VS
+    SRR3984749
+
+
+==========================================================
+5. QC DECISION
+==========================================================
+
+IF:
+
+    sequence_quality is acceptable
+    AND
+    adapter_content is acceptable
+    AND
+    read characteristics are consistent
+
+THEN:
+
+    mark_control_data = "Suitable for downstream analysis"
+
+ELSE:
+
+    identify problematic QC metric
+    perform preprocessing if required
+
+
+==========================================================
+6. COMPLETED ANALYSIS
+==========================================================
+
+COMPLETED:
+
+    NCBI data acquisition
+        ↓
+    Control sample selection
+        ↓
+    FASTQ organization
+        ↓
+    FastQC
+        ↓
+    MultiQC
+        ↓
+    Quality assessment
+
+
+==========================================================
+7. PROPOSED DOWNSTREAM WORKFLOW
+==========================================================
+
+IF additional stress samples are available:
+
+    RUN read preprocessing
+        ↓
+    ALIGN reads to maize B73 reference
+        OR
+    QUANTIFY transcripts
+        ↓
+    CREATE gene-expression matrix
+        ↓
+    PERFORM differential expression
+        ↓
+    IDENTIFY metabolic enzyme genes
+        ↓
+    MAP genes to metabolic pathways
+        ↓
+    CALCULATE pathway response
+        ↓
+    COMPARE:
+
+        Control vs Cold
+        Control vs Drought
+        Control vs Heat
+
+        ↓
+    IDENTIFY:
+
+        shared responses
+        stress-specific responses
+
+
+==========================================================
+8. BIOLOGICAL INTERPRETATION
+==========================================================
+
+USE transcriptomic results to:
+
+    identify possible pathway-level responses
+
+DO NOT assume:
+
+    increased_gene_expression
+        =
+    increased_metabolite
+
+DO NOT claim:
+
+    gene_expression
+        =
+    confirmed physiological change
+
+
+INTERPRET results as:
+
+    "suggests"
+    "may indicate"
+    "is consistent with"
+
+
+==========================================================
+9. CURRENT PROJECT STATUS
+==========================================================
+
+STATUS:
+
+    Raw data acquisition       = COMPLETED
+    FastQC                     = COMPLETED
+    MultiQC                    = COMPLETED
+    QC assessment              = COMPLETED
+
+    Read trimming              = NOT COMPLETED
+    Alignment                  = NOT COMPLETED
+    Quantification             = NOT COMPLETED
+    Differential expression    = NOT COMPLETED
+    Metabolic pathway analysis = NOT COMPLETED
+
+
+==========================================================
+END
+==========================================================
