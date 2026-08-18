@@ -1,0 +1,5 @@
+Module	Section	Sample Name	Source
+FastQC	all_sections	SRR3984708_1	C:\Users\Bolu\Desktop\work\programming\library\content\src\assets\exerciseOne\02_QC\SRR3984708_1_fastqc.zip
+FastQC	all_sections	SRR3984708_2	C:\Users\Bolu\Desktop\work\programming\library\content\src\assets\exerciseOne\02_QC\SRR3984708_2_fastqc.zip
+FastQC	all_sections	SRR3984749_1	C:\Users\Bolu\Desktop\work\programming\library\content\src\assets\exerciseOne\02_QC\SRR3984749_1_fastqc.zip
+FastQC	all_sections	SRR3984749_2	C:\Users\Bolu\Desktop\work\programming\library\content\src\assets\exerciseOne\02_QC\SRR3984749_2_fastqc.zip
