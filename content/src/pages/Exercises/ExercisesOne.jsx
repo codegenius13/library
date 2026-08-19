@@ -75,7 +75,7 @@ const ExercisesOne = () => {
           The completed stage of the analysis focused on the two biological
           control replicates. Four paired-end FASTQ files were assessed using
           FastQC and summarized with MultiQC to evaluate sequencing quality,
-          GC distribution, sequence duplication, read-length distribution and
+          GC distribution, sequence duplication, read-count distribution and
           adapter content.
         </p>
 
@@ -165,7 +165,7 @@ const ExercisesOne = () => {
           <li>
             The resulting quality-control metrics were examined for sequence
             quality, GC distribution, adapter content, duplication and read
-            length distribution.
+            count distribution.
           </li>
 
         </ol>
@@ -341,7 +341,7 @@ const ExercisesOne = () => {
           FastQC and MultiQC provided a quality assessment of the four control
           libraries before downstream RNA-seq analysis. The sequence-quality
           plots were used to evaluate whether read quality was maintained across
-          the sequencing cycles, while GC-content and read-length distributions
+          the sequencing cycles, while GC-content and read-count distributions
           were examined for unusual patterns.
         </p>
 
