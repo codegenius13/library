@@ -7,7 +7,7 @@ import Home from "./pages/Home/Home";
 import ExerciseOne from "./pages/Exercises/ExerciseOne";
 import MoveTop from "./components/MoveTop/MoveTop";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
-
+   
 
 function App() {
 
