@@ -1,0 +1,212 @@
+DESEQ2 VALIDATION REPORT
+=======================
+
+1. MODEL AND SAMPLE INFORMATION
+--------------------------------
+Design: ~ condition 
+Genes: 25968 
+Samples: 10 
+Coefficients:
+[1] "Intercept"                     "condition_Cold_vs_Control"    
+[3] "condition_Drought_vs_Control"  "condition_Heat_vs_Control"    
+[5] "condition_Salinity_vs_Control"
+
+Sample metadata:
+           condition sizeFactor
+SRR3984708   Control  0.9890398
+SRR3984749   Control  1.2837954
+SRR3984762  Salinity  1.1609811
+SRR3984771  Salinity  1.2520124
+SRR3984782   Drought  1.1478608
+SRR3984791   Drought  1.1034735
+SRR3984794      Heat  0.7877311
+SRR3984795      Heat  0.8559204
+SRR3984802      Cold  0.8805278
+SRR3984815      Cold  0.8179698
+
+Size factors:
+SRR3984708 SRR3984749 SRR3984762 SRR3984771 SRR3984782 SRR3984791 SRR3984794 
+ 0.9890398  1.2837954  1.1609811  1.2520124  1.1478608  1.1034735  0.7877311 
+SRR3984795 SRR3984802 SRR3984815 
+ 0.8559204  0.8805278  0.8179698 
+
+
+2. EXTREME FOLD-CHANGE INSPECTION
+----------------------------------
+
+ Cold vs Control
+Significant DEGs: 1354 
+NA adjusted p-values: 3525 
+Maximum log2FC: 13.58785 
+Minimum log2FC: -15.21805 
+
+Five largest absolute fold changes:
+              Geneid  baseMean log2FoldChange    lfcSE         padj
+ gene:Zm00001d043121  38.30227      -15.21805 4.974645 4.040588e-02
+ gene:Zm00001d048208 485.00956       13.58785 2.704996 5.429739e-05
+ gene:Zm00001d021205 327.03019       13.23347 2.870498 2.980192e-04
+ gene:Zm00001d007175 247.91529       12.79572 1.630597 2.327583e-12
+ gene:Zm00001d047728 241.27939       12.77385 1.559119 1.545586e-13
+
+Normalized counts for these genes:
+                    SRR3984708 SRR3984749 SRR3984762 SRR3984771 SRR3984782
+gene:Zm00001d043121          1          0        0.0        7.2        0.0
+gene:Zm00001d048208          0          0      763.1        7.2        0.0
+gene:Zm00001d021205          0          0       87.0        8.8        1.7
+gene:Zm00001d007175          0          0       64.6       43.1       10.5
+gene:Zm00001d047728          0          0       37.0       47.9        9.6
+                    SRR3984791 SRR3984794 SRR3984795 SRR3984802 SRR3984815
+gene:Zm00001d043121      363.4       11.4        0.0        0.0        0.0
+gene:Zm00001d048208        0.0       12.7       46.7     2149.8     1870.5
+gene:Zm00001d021205        0.0        0.0       28.0     1529.8     1615.0
+gene:Zm00001d007175       25.4        0.0       14.0      991.5     1330.1
+gene:Zm00001d047728        3.6       12.7       15.2      807.5     1479.3
+
+ Drought vs Control
+Significant DEGs: 1836 
+NA adjusted p-values: 3021 
+Maximum log2FC: 22.59925 
+Minimum log2FC: -18.80056 
+
+Five largest absolute fold changes:
+              Geneid   baseMean log2FoldChange    lfcSE         padj
+ gene:Zm00001d003190    61.8011       22.59925 4.784955 1.246070e-04
+ gene:Zm00001d031796   169.0515      -18.80056 3.743938 3.312285e-05
+ gene:Zm00001d025055   490.3049       13.37564 2.303411 7.302520e-07
+ gene:Zm00001d037894 17341.7323       12.58068 1.579386 8.777853e-13
+ gene:Zm00001d008983   531.9802       12.47670 2.294018 4.610119e-06
+
+Normalized counts for these genes:
+                    SRR3984708 SRR3984749 SRR3984762 SRR3984771 SRR3984782
+gene:Zm00001d003190        0.0        0.0        3.4        0.0        0.0
+gene:Zm00001d031796        0.0       10.9      569.3        0.0        0.0
+gene:Zm00001d025055        0.0        0.0      435.0       28.8      800.6
+gene:Zm00001d037894        7.1       17.1      312.7       13.6     8256.2
+gene:Zm00001d008983        1.0        0.0       54.3       10.4      976.6
+                    SRR3984791 SRR3984794 SRR3984795 SRR3984802 SRR3984815
+gene:Zm00001d003190      609.9        0.0        4.7        0.0        0.0
+gene:Zm00001d031796        0.0       12.7        2.3      241.9      853.3
+gene:Zm00001d025055     2669.8       39.4      897.3        9.1       23.2
+gene:Zm00001d037894   140557.1    16854.7     7357.0       28.4       13.4
+gene:Zm00001d008983     4272.9        0.0        4.7        0.0        0.0
+
+ Heat vs Control
+Significant DEGs: 3206 
+NA adjusted p-values: 3525 
+Maximum log2FC: 15.57487 
+Minimum log2FC: -11.55727 
+
+Five largest absolute fold changes:
+              Geneid  baseMean log2FoldChange    lfcSE         padj
+ gene:Zm00001d039942 1593.8452       15.57487 1.509869 6.125237e-22
+ gene:Zm00001d003190   61.8011       15.57433 4.840919 1.394600e-02
+ gene:Zm00001d033369  717.7862       14.19891 1.648016 2.643005e-15
+ gene:Zm00001d007411  582.5514       14.11546 2.466550 6.857840e-07
+ gene:Zm00001d046204  558.6955       14.05847 1.708933 5.848077e-14
+
+Normalized counts for these genes:
+                    SRR3984708 SRR3984749 SRR3984762 SRR3984771 SRR3984782
+gene:Zm00001d039942          0          0        0.9        0.8        0.0
+gene:Zm00001d003190          0          0        3.4        0.0        0.0
+gene:Zm00001d033369          0          0        8.6        7.2       95.8
+gene:Zm00001d007411          0          0        0.9        3.2        0.9
+gene:Zm00001d046204          0          0        0.0        0.0        4.4
+                    SRR3984791 SRR3984794 SRR3984795 SRR3984802 SRR3984815
+gene:Zm00001d039942        0.0     7693.0     8242.6        0.0        1.2
+gene:Zm00001d003190      609.9        0.0        4.7        0.0        0.0
+gene:Zm00001d033369      926.2     2909.6     3230.4        0.0        0.0
+gene:Zm00001d007411       25.4     1895.3     3899.9        0.0        0.0
+gene:Zm00001d046204       10.0      377.0     5193.2        1.1        1.2
+
+ Salinity vs Control
+Significant DEGs: 1670 
+NA adjusted p-values: 4028 
+Maximum log2FC: 15.12908 
+Minimum log2FC: -9.880481 
+
+Five largest absolute fold changes:
+              Geneid baseMean log2FoldChange    lfcSE        padj
+ gene:Zm00001d003190  61.8011       15.12908 4.836843 0.028635896
+ gene:Zm00001d017381 411.4416       13.39168 3.226311 0.001348784
+ gene:Zm00001d048208 485.0096       11.20406 2.705298 0.001399151
+ gene:Zm00001d014463 195.3498       10.81436 2.562742 0.001057939
+ gene:Zm00001d030267 214.9293       10.62092 2.740737 0.003329601
+
+Normalized counts for these genes:
+                    SRR3984708 SRR3984749 SRR3984762 SRR3984771 SRR3984782
+gene:Zm00001d003190          0          0        3.4        0.0        0.0
+gene:Zm00001d017381          0          0     3492.7       16.8       12.2
+gene:Zm00001d048208          0          0      763.1        7.2        0.0
+gene:Zm00001d014463          0          0      551.3       36.7      135.0
+gene:Zm00001d030267          0          0      470.3       43.9       29.6
+                    SRR3984791 SRR3984794 SRR3984795 SRR3984802 SRR3984815
+gene:Zm00001d003190      609.9        0.0        4.7        0.0        0.0
+gene:Zm00001d017381      140.5       50.8      358.7        0.0       42.8
+gene:Zm00001d048208        0.0       12.7       46.7     2149.8     1870.5
+gene:Zm00001d014463     1059.4       14.0        0.0       55.6      101.5
+gene:Zm00001d030267      473.1      994.0      126.2        0.0       12.2
+
+
+3. COMMON FOUR-STRESS GENES
+----------------------------
+Genes in existing common file: 103 
+Genes independently found in all four comparisons: 103 
+Common genes with all four directions positive: 80 
+Common genes with all four directions negative: 12 
+Common genes with mixed directions: 11 
+
+First 15 common genes with fold changes:
+              Geneid      Cold   Drought      Heat  Salinity
+ gene:Zm00001d042107  4.766413  1.756670  1.568014  3.066086
+ gene:Zm00001d000339  7.706115  4.328719  3.053952  4.902203
+ gene:Zm00001d039524  8.118071  3.097808  2.284436  4.081049
+ gene:Zm00001d013208  5.157673  1.509262  1.649787  1.830496
+ gene:Zm00001d022451  8.388005  2.668087  4.269042  3.009605
+ gene:Zm00001d012585  6.180368  3.568476  2.217485  3.245373
+ gene:Zm00001d002364  7.517175  2.729215  4.568243  3.610208
+ gene:Zm00001d044752  5.170600  2.034370  2.128007  2.647711
+ gene:Zm00001d026859 -6.537072 -8.399970 -1.995705 -9.619978
+ gene:Zm00001d034130  7.249287  3.013490  2.336471  3.678686
+ gene:Zm00001d036676  5.707261  4.372553  3.978561  3.694083
+ gene:Zm00001d047728 12.773854  5.343902  6.418020  8.024320
+ gene:Zm00001d007175 12.795723  6.776105  5.446961  8.365584
+ gene:Zm00001d043205  5.086150  3.905600  1.916962  3.767769
+ gene:Zm00001d048294  5.163974  2.359121  5.920713  2.579301
+
+
+4. STRESS-SPECIFIC GENES: INDEPENDENT CHECK
+--------------------------------------------
+
+ Cold 
+Existing specific genes: 640 
+Recalculated specific genes: 640 
+Existing genes absent from recalculated set: 0 
+Recalculated genes missing from existing set: 0 
+
+ Drought 
+Existing specific genes: 674 
+Recalculated specific genes: 674 
+Existing genes absent from recalculated set: 0 
+Recalculated genes missing from existing set: 0 
+
+ Heat 
+Existing specific genes: 1996 
+Recalculated specific genes: 1996 
+Existing genes absent from recalculated set: 0 
+Recalculated genes missing from existing set: 0 
+
+ Salinity 
+Existing specific genes: 555 
+Recalculated specific genes: 555 
+Existing genes absent from recalculated set: 0 
+Recalculated genes missing from existing set: 0 
+
+
+5. PAIRWISE OVERLAP RECHECK
+----------------------------
+Cold - Drought : 293 shared DEGs
+Cold - Heat : 475 shared DEGs
+Cold - Salinity : 342 shared DEGs
+Drought - Heat : 692 shared DEGs
+Drought - Salinity : 728 shared DEGs
+Heat - Salinity : 596 shared DEGs

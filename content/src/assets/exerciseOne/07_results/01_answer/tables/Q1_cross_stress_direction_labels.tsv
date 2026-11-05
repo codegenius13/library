@@ -1,0 +1,9 @@
+GO_ID	Description	Cold	Drought	Heat	Salinity
+GO:0009693	ethylene biosynthetic process	Predominantly_upregulated	Mixed	NA	Predominantly_upregulated
+GO:0009773	photosynthetic electron transport in photosystem I	NA	Predominantly_downregulated	NA	NA
+GO:0034484	raffinose catabolic process	NA	Mixed	NA	NA
+GO:0005992	trehalose biosynthetic process	NA	Predominantly_downregulated	NA	Predominantly_downregulated
+GO:0009310	amine catabolic process	NA	Predominantly_downregulated	NA	NA
+GO:0006457	protein folding	NA	NA	Predominantly_upregulated	NA
+GO:0009809	lignin biosynthetic process	NA	NA	NA	Predominantly_upregulated
+GO:0009695	jasmonic acid biosynthetic process	NA	NA	NA	Predominantly_upregulated

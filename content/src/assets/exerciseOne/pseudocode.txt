@@ -1,0 +1,269 @@
+# ============================================================
+# METHOD 1: DOWNLOAD AND PREPARE RAW RNA-SEQ READS
+# ============================================================
+# Objective:
+# Obtain raw paired-end RNA-seq reads for maize B73 leaves
+# under control, salinity, drought, heat, and cold stress.
+#
+# Dataset:
+# NCBI SRA accession: SRP080208
+# Organism: Zea mays (B73)
+# Two biological replicates per condition
+#
+# Conditions:
+# Control  -> SRR3984749, SRR3984708
+# Salinity -> SRR3984771, SRR3984762
+# Drought  -> SRR3984791, SRR3984782
+# Heat     -> SRR3984795, SRR3984794
+# Cold     -> SRR3984815, SRR3984802
+#
+# Input:
+# Publicly available SRA sequencing data
+#
+# Output:
+# Paired compressed FASTQ files (.fastq.gz)
+
+
+# ------------------------------------------------------------
+# 1. CREATE PROJECT DIRECTORIES
+# ------------------------------------------------------------
+
+# Create directories for raw reads and each stress condition
+
+mkdir -p ~/bioinformatics/raw_reads
+mkdir -p ~/bioinformatics/data
+mkdir -p ~/bioinformatics/qc
+
+# Create condition-specific directories
+
+mkdir -p "/path/to/maize/Control"
+mkdir -p "/path/to/maize/Salinity"
+mkdir -p "/path/to/maize/Drought"
+mkdir -p "/path/to/maize/Heat"
+mkdir -p "/path/to/maize/Cold"
+
+
+# ------------------------------------------------------------
+# 2. DEFINE SRA ACCESSIONS
+# ------------------------------------------------------------
+
+# Store the accession numbers for each experimental condition
+
+Control=("SRR3984749" "SRR3984708")
+Salinity=("SRR3984771" "SRR3984762")
+Drought=("SRR3984791" "SRR3984782")
+Heat=("SRR3984795" "SRR3984794")
+Cold=("SRR3984815" "SRR3984802")
+
+
+# ------------------------------------------------------------
+# 3. DOWNLOAD SRA DATA USING SRA TOOLKIT
+# ------------------------------------------------------------
+
+# Use NCBI SRA Toolkit prefetch to download each SRA run
+
+prefetch SRR3984749 \
+    --output-directory "/path/to/sra_temp"
+
+prefetch SRR3984708 \
+    --output-directory "/path/to/sra_temp"
+
+# Repeat for all remaining SRA accessions
+
+prefetch SRR3984771 \
+    --output-directory "/path/to/sra_temp"
+
+prefetch SRR3984762 \
+    --output-directory "/path/to/sra_temp"
+
+prefetch SRR3984791 \
+    --output-directory "/path/to/sra_temp"
+
+prefetch SRR3984782 \
+    --output-directory "/path/to/sra_temp"
+
+prefetch SRR3984795 \
+    --output-directory "/path/to/sra_temp"
+
+prefetch SRR3984794 \
+    --output-directory "/path/to/sra_temp"
+
+prefetch SRR3984815 \
+    --output-directory "/path/to/sra_temp"
+
+prefetch SRR3984802 \
+    --output-directory "/path/to/sra_temp"
+
+
+# ------------------------------------------------------------
+# 4. VERIFY DOWNLOADED SRA FILES
+# ------------------------------------------------------------
+
+# Check that each accession contains a completed .sra file
+
+ls -lh "/path/to/sra_temp/SRR3984749/"
+ls -lh "/path/to/sra_temp/SRR3984708/"
+ls -lh "/path/to/sra_temp/SRR3984771/"
+ls -lh "/path/to/sra_temp/SRR3984762/"
+ls -lh "/path/to/sra_temp/SRR3984791/"
+ls -lh "/path/to/sra_temp/SRR3984782/"
+ls -lh "/path/to/sra_temp/SRR3984795/"
+ls -lh "/path/to/sra_temp/SRR3984794/"
+ls -lh "/path/to/sra_temp/SRR3984815/"
+ls -lh "/path/to/sra_temp/SRR3984802/"
+
+
+# ------------------------------------------------------------
+# 5. INSPECT SRA METADATA / READ STRUCTURE
+# ------------------------------------------------------------
+
+# Confirm sequencing information and number of reads
+
+vdb-dump --info \
+    "/path/to/sra_temp/SRR3984791/SRR3984791.sra"
+
+# Repeat as required for other samples
+
+
+# ------------------------------------------------------------
+# 6. CONVERT SRA TO PAIRED-END FASTQ
+# ------------------------------------------------------------
+
+# Extract paired-end reads from the SRA file
+
+fasterq-dump \
+    --split-files \
+    -e 4 \
+    -t "/path/to/condition_folder" \
+    -O "/path/to/condition_folder" \
+    "/path/to/sra_temp/SRR3984791/SRR3984791.sra"
+
+# Expected output:
+
+# SRR3984791_1.fastq
+# SRR3984791_2.fastq
+
+# Repeat for every SRA accession.
+
+
+# ------------------------------------------------------------
+# 7. VERIFY FASTQ OUTPUT
+# ------------------------------------------------------------
+
+# Confirm that both paired FASTQ files were generated
+
+ls -lh \
+    "/path/to/Drought/SRR3984791_1.fastq" \
+    "/path/to/Drought/SRR3984791_2.fastq"
+
+# Confirm that the files are not empty
+
+du -h \
+    "/path/to/Drought/SRR3984791_1.fastq"
+
+du -h \
+    "/path/to/Drought/SRR3984791_2.fastq"
+
+
+# ------------------------------------------------------------
+# 8. COMPRESS FASTQ FILES
+# ------------------------------------------------------------
+
+# Compress FASTQ files using parallel gzip
+
+pigz -p 4 \
+    "/path/to/Drought/SRR3984791_1.fastq"
+
+pigz -p 4 \
+    "/path/to/Drought/SRR3984791_2.fastq"
+
+
+# Expected output:
+
+# SRR3984791_1.fastq.gz
+# SRR3984791_2.fastq.gz
+
+
+# Repeat compression for all samples.
+
+
+# ------------------------------------------------------------
+# 9. VERIFY COMPRESSED READS
+# ------------------------------------------------------------
+
+# List final compressed FASTQ files
+
+ls -lh "/path/to/Drought/"
+
+# Check gzip integrity
+
+gzip -t \
+    "/path/to/Drought/SRR3984791_1.fastq.gz"
+
+gzip -t \
+    "/path/to/Drought/SRR3984791_2.fastq.gz"
+
+# A successful command returns no error.
+
+
+# ------------------------------------------------------------
+# 10. ORGANIZE FINAL RAW READ DATA
+# ------------------------------------------------------------
+
+# Store paired compressed reads according to experimental condition
+
+# Control/
+#     SRR3984749_1.fastq.gz
+#     SRR3984749_2.fastq.gz
+#     SRR3984708_1.fastq.gz
+#     SRR3984708_2.fastq.gz
+#
+# Salinity/
+#     SRR3984771_1.fastq.gz
+#     SRR3984771_2.fastq.gz
+#     SRR3984762_1.fastq.gz
+#     SRR3984762_2.fastq.gz
+#
+# Drought/
+#     SRR3984791_1.fastq.gz
+#     SRR3984791_2.fastq.gz
+#     SRR3984782_1.fastq.gz
+#     SRR3984782_2.fastq.gz
+#
+# Heat/
+#     SRR3984795_1.fastq.gz
+#     SRR3984795_2.fastq.gz
+#     SRR3984794_1.fastq.gz
+#     SRR3984794_2.fastq.gz
+#
+# Cold/
+#     SRR3984815_1.fastq.gz
+#     SRR3984815_2.fastq.gz
+#     SRR3984802_1.fastq.gz
+#     SRR3984802_2.fastq.gz
+
+
+# ------------------------------------------------------------
+# 11. OPTIONAL STORAGE CLEANUP
+# ------------------------------------------------------------
+
+# After successful FASTQ extraction and compression,
+# the original .sra file may be removed to conserve storage.
+
+rm "/path/to/sra_temp/SRR3984791/SRR3984791.sra"
+
+# Only perform this after verifying the corresponding
+# .fastq.gz files are complete and readable.
+
+
+# ------------------------------------------------------------
+# FINAL OUTPUT OF METHOD 1
+# ------------------------------------------------------------
+
+# 10 paired-end RNA-seq samples
+# 20 compressed FASTQ files
+# 4 experimental stresses + control
+# 2 biological replicates per condition
+#
+# These .fastq.gz files become the input for Method 2:
+# RAW READ QUALITY CONTROL

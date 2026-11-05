@@ -1,0 +1,117 @@
+[PASS] Directory exists: /home/bolu/exerciseOne/01_raw_data
+[PASS] Directory exists: /home/bolu/exerciseOne/03_trimmed_reads
+[PASS] Directory exists: /home/bolu/exerciseOne/04_alignment
+[PASS] Directory exists: /home/bolu/exerciseOne/05_DE_analysis
+[PASS] Directory exists: /home/bolu/exerciseOne/06_pathway/annotation
+[PASS] Directory exists: /home/bolu/exerciseOne/06_pathway/gene_sets
+[PASS] Directory exists: /home/bolu/exerciseOne/07_results/01_answer
+[PASS] SRR3984815 (Cold): raw SRA/paired FASTQ found
+[PASS] SRR3984815: trimmed read 1 and read 2 files found
+[PASS] SRR3984802 (Cold): raw SRA/paired FASTQ found
+[PASS] SRR3984802: trimmed read 1 and read 2 files found
+[PASS] SRR3984795 (Heat): raw SRA/paired FASTQ found
+[PASS] SRR3984795: trimmed read 1 and read 2 files found
+[PASS] SRR3984794 (Heat): raw SRA/paired FASTQ found
+[PASS] SRR3984794: trimmed read 1 and read 2 files found
+[PASS] SRR3984791 (Drought): raw SRA/paired FASTQ found
+[PASS] SRR3984791: trimmed read 1 and read 2 files found
+[PASS] SRR3984782 (Drought): raw SRA/paired FASTQ found
+[PASS] SRR3984782: trimmed read 1 and read 2 files found
+[PASS] SRR3984771 (Salinity): raw SRA/paired FASTQ found
+[PASS] SRR3984771: trimmed read 1 and read 2 files found
+[PASS] SRR3984762 (Salinity): raw SRA/paired FASTQ found
+[PASS] SRR3984762: trimmed read 1 and read 2 files found
+[PASS] SRR3984749 (Control): raw SRA/paired FASTQ found
+[PASS] SRR3984749: trimmed read 1 and read 2 files found
+[PASS] SRR3984708 (Control): raw SRA/paired FASTQ found
+[PASS] SRR3984708: trimmed read 1 and read 2 files found
+[PASS] SRR3984815 BAM: exists, 2,356,866,479 bytes
+[PASS] SRR3984815 BAM index: exists, 1,824,952 bytes
+[PASS] SRR3984815: HISAT2 overall alignment rate 93.92%
+[PASS] SRR3984802 BAM: exists, 3,055,332,171 bytes
+[PASS] SRR3984802 BAM index: exists, 2,093,712 bytes
+[PASS] SRR3984802: HISAT2 overall alignment rate 94.34%
+[PASS] SRR3984795 BAM: exists, 2,582,402,076 bytes
+[PASS] SRR3984795 BAM index: exists, 1,990,096 bytes
+[PASS] SRR3984795: HISAT2 overall alignment rate 94.58%
+[PASS] SRR3984794 BAM: exists, 2,609,020,381 bytes
+[PASS] SRR3984794 BAM index: exists, 2,052,224 bytes
+[PASS] SRR3984794: HISAT2 overall alignment rate 95.25%
+[PASS] SRR3984791 BAM: exists, 2,330,849,587 bytes
+[PASS] SRR3984791 BAM index: exists, 1,885,472 bytes
+[PASS] SRR3984791: HISAT2 overall alignment rate 94.49%
+[PASS] SRR3984782 BAM: exists, 2,578,325,326 bytes
+[PASS] SRR3984782 BAM index: exists, 2,058,320 bytes
+[PASS] SRR3984782: HISAT2 overall alignment rate 94.98%
+[PASS] SRR3984771 BAM: exists, 2,873,519,233 bytes
+[PASS] SRR3984771 BAM index: exists, 1,989,656 bytes
+[PASS] SRR3984771: HISAT2 overall alignment rate 95.04%
+[PASS] SRR3984762 BAM: exists, 2,855,949,992 bytes
+[PASS] SRR3984762 BAM index: exists, 2,070,000 bytes
+[PASS] SRR3984762: HISAT2 overall alignment rate 95.77%
+[PASS] SRR3984749 BAM: exists, 3,755,950,814 bytes
+[PASS] SRR3984749 BAM index: exists, 2,318,376 bytes
+[PASS] SRR3984749: HISAT2 overall alignment rate 94.45%
+[PASS] SRR3984708 BAM: exists, 2,845,476,358 bytes
+[PASS] SRR3984708 BAM index: exists, 2,183,184 bytes
+[PASS] SRR3984708: HISAT2 overall alignment rate 95.27%
+[PASS] featureCounts matrix: exists, 34,010,873 bytes
+[PASS] Count matrix contains all 10 expected sample columns
+[PASS] Count matrix has 44,474 data rows (including any annotation rows)
+[PASS] DESeq2 model RDS: exists, 15,585,619 bytes
+[PASS] DEG summary: exists, 213 bytes
+[PASS] DEG summary has 4 comparison rows
+[PASS] Maize-GAMER RefGen4 GAF: exists, 2,274,860 bytes
+[PASS] GO ontology: exists, 32,227,785 bytes
+[PASS] Enzyme-associated GO terms: exists, 405,016 bytes
+[PASS] RefGen4 enzyme gene-GO mapping: exists, 702,078 bytes
+[PASS] RefGen4 enzyme-associated genes: exists, 298,500 bytes
+[PASS] RefGen4 metabolic enzyme mapping: exists, 1,132,275 bytes
+[PASS] RefGen4 metabolic enzyme gene list: exists, 278,775 bytes
+[PASS] Metabolic enzyme universe contains 18,585 unique IDs; expected historical checkpoint 18,585
+[PASS] Metabolic-universe gene IDs use the expected RefGen4 prefix
+[PASS] Cold metabolic-enzyme DEG set: exists, 89,967 bytes
+[PASS] Cold: 694 rows match the expected metabolic-enzyme DEG count
+[PASS] Cold: directly counted log2FC >= 1: 349; <= -1: 345; between thresholds: 0
+[PASS] Cold: adjusted-P values are numeric and within [0,1]
+[PASS] Drought metabolic-enzyme DEG set: exists, 130,927 bytes
+[PASS] Drought: 1009 rows match the expected metabolic-enzyme DEG count
+[PASS] Drought: directly counted log2FC >= 1: 521; <= -1: 488; between thresholds: 0
+[PASS] Drought: adjusted-P values are numeric and within [0,1]
+[PASS] Heat metabolic-enzyme DEG set: exists, 226,831 bytes
+[PASS] Heat: 1749 rows match the expected metabolic-enzyme DEG count
+[PASS] Heat: directly counted log2FC >= 1: 955; <= -1: 794; between thresholds: 0
+[PASS] Heat: adjusted-P values are numeric and within [0,1]
+[PASS] Salinity metabolic-enzyme DEG set: exists, 115,003 bytes
+[PASS] Salinity: 889 rows match the expected metabolic-enzyme DEG count
+[PASS] Salinity: directly counted log2FC >= 1: 591; <= -1: 298; between thresholds: 0
+[PASS] Salinity: adjusted-P values are numeric and within [0,1]
+[PASS] RQ1 table Q1_metabolic_process_enrichment.tsv: exists, 25,602 bytes
+[PASS] RQ1 table Q1_metabolic_process_direction.tsv: exists, 7,993 bytes
+[PASS] RQ1 table Q1_enrichment_summary.tsv: exists, 74 bytes
+[PASS] RQ1 table Q1_shared_stress_specific_processes.tsv: exists, 3,055 bytes
+[PASS] RQ1 table Q1_cross_stress_direction_matrix.tsv: exists, 3,048 bytes
+[PASS] RQ1 enrichment summary matches expected values: {'Cold': 2, 'Drought': 16, 'Heat': 24, 'Salinity': 13}
+[PASS] RQ1 enrichment table has 55 records; expected historical checkpoint 55
+[PASS] RQ1 direction table has 55 rows; expected 55 stress-process records
+[PASS] RQ1 direction table contains the expected interpretation columns
+[PASS] RQ1 process classes agree: 1 all-four, 9 multi-stress, 30 specific; 40 unique GO IDs
+[PASS] RQ1 cross-stress direction matrix has 40 rows; expected 40 unique processes
+[PASS] Figure Figure_1_enriched_metabolic_processes.png: exists, 177,816 bytes
+[PASS] Figure_1_enriched_metabolic_processes.png: valid PNG file signature
+[PASS] Figure Figure_1_enriched_metabolic_processes.pdf: exists, 4,603 bytes
+[PASS] Figure_1_enriched_metabolic_processes.pdf: valid PDF file signature
+[PASS] Figure Figure_2_top_metabolic_processes.png: exists, 891,992 bytes
+[PASS] Figure_2_top_metabolic_processes.png: valid PNG file signature
+[PASS] Figure Figure_2_top_metabolic_processes.pdf: exists, 9,127 bytes
+[PASS] Figure_2_top_metabolic_processes.pdf: valid PDF file signature
+[PASS] Figure Figure_3_cross_stress_metabolic_direction_heatmap.png: exists, 112,809 bytes
+[PASS] Figure_3_cross_stress_metabolic_direction_heatmap.png: valid PNG file signature
+[PASS] Figure Figure_4_metabolic_response_direction.png: exists, 218,765 bytes
+[PASS] Figure_4_metabolic_response_direction.png: valid PNG file signature
+[PASS] Figure Figure_4_metabolic_response_direction.pdf: exists, 4,818 bytes
+[PASS] Figure_4_metabolic_response_direction.pdf: valid PDF file signature
+
+PASS: 113
+WARN: 0
+FAIL: 0

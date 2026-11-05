@@ -1,0 +1,5 @@
+Comparison	Total_tested_genes	DEGs	Upregulated	Downregulated
+Cold_vs_Control	25968	1354	690	664
+Drought_vs_Control	25968	1836	917	919
+Heat_vs_Control	25968	3206	1863	1343
+Salinity_vs_Control	25968	1670	1072	598

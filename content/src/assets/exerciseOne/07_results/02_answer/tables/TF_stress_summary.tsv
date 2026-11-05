@@ -1,0 +1,5 @@
+Stress	Mapped_TF_genes	Significant_TF_genes	Upregulated_TF_genes	Downregulated_TF_genes
+Cold	1672	143	938	734
+Drought	1672	182	838	834
+Heat	1672	224	810	862
+Salinity	1672	164	941	731

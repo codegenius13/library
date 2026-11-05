@@ -1,0 +1,5 @@
+Stress	Significant_enzyme_candidates	Enzyme_up	Enzyme_down	Significant_TF_genes	TF_up	TF_down	Same_direction_up_counts_product	Same_direction_down_counts_product	Opposite_direction_counts_product
+Cold	598	315	283	143	106	37	33390	10471	41653
+Drought	919	467	452	182	95	87	44365	39324	83569
+Heat	1599	908	691	224	135	89	122580	61499	174097
+Salinity	840	569	271	164	100	64	56900	17344	63516

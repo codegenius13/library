@@ -3,26 +3,25 @@ import "./App.css";
 /** Public */
 import Home from "./pages/Home/Home";
 
-/** Practices */
-import PracticeOne from "./pages/Practices/PracticeOne";
-
 /** Exercises */
-import ExercisesOne from "./pages/Exercises/ExercisesOne";
+import ExerciseOne from "./pages/Exercises/ExerciseOne";
+import MoveTop from "./components/MoveTop/MoveTop";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
+
 
 function App() {
 
   return (
     <div className="app-container">
+       <ScrollToTop />
       <Routes>
         {/* Public Pages */}
         <Route path="/" element={<Home />} />
 
-        {/* Practice Pages */}
-        <Route path="/practice-one" element={<PracticeOne />} />
-
         {/* Exercise Pages */}
-        <Route path="/exercise-one" element={<ExercisesOne />} />
+        <Route path="/exercise-one" element={<ExerciseOne />} />
       </Routes>
+      <MoveTop />
     </div>
   );
 }
