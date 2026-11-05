@@ -1,9 +1,0 @@
-GO_ID	Description	Stress_Count	Stresses	Directions	Has_Up	Has_Down	Has_Opposing_Directions	Response_Pattern
-GO:0009693	ethylene biosynthetic process	3	Cold;Drought;Salinity	Cold:Predominantly_upregulated;Drought:Mixed;Salinity:Predominantly_upregulated	TRUE	FALSE	FALSE	Shared_across_stresses
-GO:0005992	trehalose biosynthetic process	2	Drought;Salinity	Drought:Predominantly_downregulated;Salinity:Predominantly_downregulated	FALSE	TRUE	FALSE	Shared_across_stresses
-GO:0009310	amine catabolic process	1	Drought	Drought:Predominantly_downregulated	FALSE	TRUE	FALSE	Stress_specific
-GO:0009695	jasmonic acid biosynthetic process	1	Salinity	Salinity:Predominantly_upregulated	TRUE	FALSE	FALSE	Stress_specific
-GO:0009809	lignin biosynthetic process	1	Salinity	Salinity:Predominantly_upregulated	TRUE	FALSE	FALSE	Stress_specific
-GO:0009773	photosynthetic electron transport in photosystem I	1	Drought	Drought:Predominantly_downregulated	FALSE	TRUE	FALSE	Stress_specific
-GO:0006457	protein folding	1	Heat	Heat:Predominantly_upregulated	TRUE	FALSE	FALSE	Stress_specific
-GO:0034484	raffinose catabolic process	1	Drought	Drought:Mixed	FALSE	FALSE	FALSE	Stress_specific
