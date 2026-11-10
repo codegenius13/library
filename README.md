@@ -1,7 +1,7 @@
-# Research Library
+# Practical Library
 
 <p align="center">
-  <strong>A growing research workspace in Molecular Biology, Genomics and Bioinformatics.</strong>
+  <strong>A growing practical workspace in Molecular Biology, Genomics and Bioinformatics.</strong>
 </p>
 
 <p align="center">
@@ -12,9 +12,9 @@
 
 ---
 
-## About the Research Library
+## About the Practical Library
 
-**Research Library** is my personal research workspace for building practical skills in:
+**Practical Library** is my personal practical workspace for building practical skills in:
 
 - Molecular Biology
 - Genomics
@@ -22,25 +22,25 @@
 - Computational Biology
 - Biological Data Analysis
 
-This repository documents my **research and learning progress throughout 2026**.
+This repository documents my **practical and learning progress throughout 2026**.
 
-Rather than simply collecting certificates or reading papers, I use this space to turn scientific literature into structured research exercises.
+Rather than simply collecting certificates or reading papers, I use this space to turn scientific literature into structured practical exercises.
 
-Each exercise begins with a scientific question inspired by a peer-reviewed research paper and develops into a practical analysis using appropriate biological databases, computational methods, programming, and bioinformatics tools.
+Each exercise begins with a scientific question inspired by a peer-reviewed practical paper and develops into a practical analysis using appropriate biological databases, computational methods, programming, and bioinformatics tools.
 
-> **The goal is not just to read research, but to learn how to work through research questions.**
+> **The goal is not just to read research, but to learn how to work through practical questions.**
 
 ---
 
-# Research Approach
+# Practical Approach
 
-The Research Library follows a simple process:
+The Practical Library follows a simple process:
 
 ```text
 Scientific Literature
         │
         ▼
-Identify a Research Question
+Identify a Practical Question
         │
         ▼
 Understand the Biological Background
@@ -61,4 +61,4 @@ Interpret the Results
 Critical Review
         │
         ▼
-Document the Research
+Document the Practical

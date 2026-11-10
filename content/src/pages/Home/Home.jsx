@@ -12,15 +12,15 @@ const Home = () => {
 
                     <div className="rl-eyebrow">
                         <span className="rl-eyebrow-line"></span>
-                        INDEPENDENT RESEARCH & BIOINFORMATICS
+                        INDEPENDENT PRACTICAL & BIOINFORMATICS
                     </div>
 
                     <h1>
-                        Research <span>Library</span>
+                        Practical <span>Library</span>
                     </h1>
 
                     <p className="rl-intro">
-                        A collection of self-directed research exercises in
+                        A collection of self-directed practical exercises in
                         molecular biology, genomics, transcriptomics, and
                         bioinformatics, developed through the analysis of
                         published literature and publicly available biological datasets.
@@ -30,14 +30,14 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* Research Exercises */}
+            {/* Practical Exercises */}
             <section className="rl-content">
                 <div className="rl-container">
 
                     <div className="rl-section-heading">
                         <div>
-                            <span className="rl-section-label">RESEARCH COLLECTION</span>
-                            <h2>Research Exercises</h2>
+                            <span className="rl-section-label">PRACTICAL COLLECTION</span>
+                            <h2>Practical Exercises</h2>
                             <p>
                                 Explore the computational exercises, their
                                 methodology, analytical results, and interpretations.
@@ -53,7 +53,7 @@ const Home = () => {
 
                         <div className="rl-card-top">
                             <span className="rl-paper-type">
-                                RESEARCH EXERCISE 01
+                                PRACTICAL EXERCISE 01
                             </span>
 
                             <span className="rl-paper-category">
@@ -129,16 +129,16 @@ const Home = () => {
 
                     <div className="rl-disclaimer-heading">
                         <span className="rl-disclaimer-icon">i</span>
-                        <h4>Research Disclaimer</h4>
+                        <h4>Practical Disclaimer</h4>
                     </div>
 
                     <p>
-                        This research library presents self-directed educational
-                        and computational research exercises. The work is
-                        independently developed for learning, research practice,
+                        This practical library presents self-directed educational
+                        and computational practical exercises. The work is
+                        independently developed for learning, practical application,
                         and scientific exploration using published literature and
                         publicly available datasets. It is not an established
-                        institutional research publication, has not been published
+                        institutional practical publication, has not been published
                         in an academic journal, and has not undergone formal
                         peer review. Findings and interpretations should therefore
                         be regarded as exploratory and not as experimentally
@@ -146,7 +146,7 @@ const Home = () => {
                     </p>
 
                     <div className="rl-footer-bottom">
-                        <span>INDEPENDENT RESEARCH LIBRARY</span>
+                        <span>INDEPENDENT PRACTICAL LIBRARY</span>
                         <span>MOLECULAR BIOLOGY · GENOMICS · BIOINFORMATICS</span>
                     </div>
 
