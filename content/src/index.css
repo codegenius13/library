@@ -98,6 +98,10 @@ body {
     overflow-x: hidden;
 }
 
+ul {
+   padding: 10px
+}
+
 a {
     text-decoration: none;
 }

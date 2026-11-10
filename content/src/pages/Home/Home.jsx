@@ -12,7 +12,7 @@ const Home = () => {
 
                     <div className="rl-eyebrow">
                         <span className="rl-eyebrow-line"></span>
-                        INDEPENDENT PRACTICAL & BIOINFORMATICS
+                        BOLUWATIFE IKUEROWO 
                     </div>
 
                     <h1>

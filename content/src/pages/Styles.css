@@ -1449,6 +1449,228 @@
     letter-spacing: 1px;
 }
 
+/* =====================================================
+   PUBLICATION-STYLE ENRICHMENT TABLE
+===================================================== */
+
+.research-library .rl-enrichment-table-section {
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+
+/* Table heading */
+
+.research-library .rl-enrichment-table-heading {
+    margin-bottom: 15px;
+}
+
+.research-library .rl-enrichment-table-heading span {
+    display: block;
+    margin-bottom: 7px;
+    color: #a68a45;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+}
+
+.research-library .rl-enrichment-table-heading h3 {
+    margin-bottom: 0;
+    color: var(--primary-color);
+    font-family: var(--font-heading);
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+/* Horizontal scrolling container */
+
+.research-library .rl-enrichment-table-scroll {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Main table */
+
+.research-library .rl-enrichment-table {
+    width: 100%;
+    min-width: 690px;
+    border-collapse: collapse;
+    border-spacing: 0;
+    color: #444444;
+    font-size: 11px;
+    line-height: 1.65;
+    text-align: left;
+}
+
+/* Column headings */
+
+.research-library .rl-enrichment-table thead {
+    border-top: 1.5px solid #333333;
+    border-bottom: 1px solid #333333;
+}
+
+.research-library .rl-enrichment-table th {
+    padding: 11px 10px;
+    color: #333333;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    line-height: 1.5;
+    vertical-align: bottom;
+    white-space: nowrap;
+}
+
+/* Table body — deliberately no row borders */
+
+.research-library .rl-enrichment-table tbody td {
+    padding: 10px;
+    border: none;
+    color: #555555;
+    font-size: 10px;
+    vertical-align: top;
+}
+
+/* Stress column */
+
+.research-library .rl-enrichment-table tbody td:first-child {
+    color: var(--primary-color);
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* Numeric columns */
+
+.research-library .rl-enrichment-table th:nth-child(n+3),
+.research-library .rl-enrichment-table td:nth-child(n+3) {
+    white-space: nowrap;
+}
+
+/* Final rule below the last row */
+
+.research-library .rl-enrichment-table tbody tr:last-child td {
+    padding-bottom: 13px;
+    border-bottom: 1.5px solid #333333;
+}
+
+/* Footnote */
+
+.research-library .rl-enrichment-table-footnote {
+    margin-top: 10px;
+    margin-bottom: 0;
+    color: #777777;
+    font-family: Georgia, serif;
+    font-size: 10px;
+    font-style: italic;
+    line-height: 1.8;
+}
+
+/* METABOLIC GO ENRICHMENT FIGURE */
+
+.rl-enrichment-figure {
+    width: 100%;
+    margin: 35px 0;
+}
+
+.rl-enrichment-figure-heading {
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(79, 57, 3, 0.18);
+}
+
+.rl-enrichment-figure-heading span {
+    display: block;
+    margin-bottom: 6px;
+    color: #a68a45;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.rl-enrichment-figure-heading h3 {
+    margin: 0;
+    color: var(--primary-color);
+    font-family: var(--font-heading);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.rl-enrichment-figure-image {
+    width: 100%;
+    overflow: hidden;
+    background: #fff;
+}
+
+.rl-enrichment-figure-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.rl-enrichment-figure-caption {
+    margin-top: 12px;
+    color: #555;
+    font-family: Georgia, serif;
+    font-size: 11px;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.rl-enrichment-figure-caption strong {
+    color: var(--primary-color);
+}
+
+@media (max-width: 600px) {
+    .rl-enrichment-figure {
+        margin: 25px 0;
+    }
+
+    .rl-enrichment-figure-heading h3 {
+        font-size: 14px;
+    }
+
+    .rl-enrichment-figure-caption {
+        font-size: 10px;
+        text-align: left;
+    }
+}
+
+/* Responsive adjustments */
+
+@media (max-width: 600px) {
+
+    .research-library .rl-enrichment-table-section {
+        margin-top: 25px;
+    }
+
+    .research-library .rl-enrichment-table-heading h3 {
+        font-size: 14px;
+    }
+
+    .research-library .rl-enrichment-table {
+        min-width: 680px;
+    }
+
+    .research-library .rl-enrichment-table th {
+        padding: 10px 8px;
+        font-size: 9px;
+    }
+
+    .research-library .rl-enrichment-table tbody td {
+        padding: 9px 8px;
+        font-size: 10px;
+    }
+
+    .research-library .rl-enrichment-table-footnote {
+        font-size: 9px;
+    }
+
+}
+
 
 /* =====================================================
    RESPONSIVE DESIGN
