@@ -1138,6 +1138,83 @@ const ExerciseOne = () => {
                                 gene sets associated with those processes under each stress condition.
                             </p>
 
+                            <section className="rl-enrichment-table-section">
+                                <div className="rl-enrichment-table-heading">
+                                    <span>TABLE 3</span>
+                                    <h3>
+                                        Relationship Between Metabolic-Enzyme Candidates and Enriched Biological Processes
+                                    </h3>
+                                </div>
+
+                                <div className="rl-enrichment-table-scroll">
+                                    <table className="rl-enrichment-table">
+
+                                        <thead>
+                                            <tr>
+                                                <th>Stress</th>
+                                                <th>All enzyme candidates</th>
+                                                <th>Upregulated</th>
+                                                <th>Downregulated</th>
+                                                <th>Candidates associated with enriched GO processes</th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+
+                                            <tr>
+                                                <td>Cold</td>
+                                                <td>598</td>
+                                                <td>315</td>
+                                                <td>283</td>
+                                                <td>20</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>Drought</td>
+                                                <td>919</td>
+                                                <td>467</td>
+                                                <td>452</td>
+                                                <td>49</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>Heat</td>
+                                                <td>1,599</td>
+                                                <td>908</td>
+                                                <td>691</td>
+                                                <td>46</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>Salinity</td>
+                                                <td>840</td>
+                                                <td>569</td>
+                                                <td>271</td>
+                                                <td>69</td>
+                                            </tr>
+
+
+                                        </tbody>
+
+                                    </table>
+                                </div>
+                                <p className="rl-enrichment-table-footnote">
+                                    The overall metabolic-enzyme candidate counts represent all
+                                    differentially expressed enzyme-associated genes identified
+                                    under each stress condition using padj ≤ 0.05 and |log₂FC| ≥ 1.
+                                    Candidate–GO associations represent the subset of these genes
+                                    associated with the significantly enriched GO biological
+                                    processes identified in Practice 1. The upregulated and
+                                    downregulated counts in the process columns refer only to genes
+                                    associated with the corresponding enriched process, not to the
+                                    entire metabolic-enzyme candidate set. A gene may contribute to
+                                    more than one GO association. Expression patterns were classified
+                                    using the 70% directional threshold. These results describe
+                                    transcript-level associations and do not establish pathway
+                                    activity, enzyme activity, or metabolic flux.
+                                </p>
+                            </section>
+
                             <p>
                                 The TF analysis identified 1,672 mapped TF genes per stress
                                 comparison. Of these, 143 were significantly differentially
@@ -1251,15 +1328,15 @@ const ExerciseOne = () => {
                                 </div>
 
                                 <figcaption className="rl-enrichment-figure-caption">
-                                    <strong>Figure 7.</strong>  Cross-stress expression 
-                                    estimates of mapped transcription-factor genes under cold, 
-                                    drought, heat, and salinity conditions. The heatmap displays 
-                                    log2 fold-change estimates for TF genes across the four 
-                                    stress-versus-control comparisons. Expression direction and 
-                                    magnitude can be compared across conditions, but statistical 
-                                    significance must be interpreted using the corresponding 
-                                    adjusted p-values and the predefined fold-change threshold. 
-                                    Similar expression patterns indicate co-response and do not 
+                                    <strong>Figure 7.</strong>  Cross-stress expression
+                                    estimates of mapped transcription-factor genes under cold,
+                                    drought, heat, and salinity conditions. The heatmap displays
+                                    log2 fold-change estimates for TF genes across the four
+                                    stress-versus-control comparisons. Expression direction and
+                                    magnitude can be compared across conditions, but statistical
+                                    significance must be interpreted using the corresponding
+                                    adjusted p-values and the predefined fold-change threshold.
+                                    Similar expression patterns indicate co-response and do not
                                     establish direct regulatory relationships.
                                 </figcaption>
 
