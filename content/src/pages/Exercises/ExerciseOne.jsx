@@ -1123,25 +1123,12 @@ const ExerciseOne = () => {
 
                             </figure>
 
-                            <p>
-                                To connect the candidate-level results with the enrichment analysis,
-                                the metabolic-enzyme candidates were cross-referenced against the significantly
-                                enriched GO biological processes identified previously. This produced 184
-                                non-empty candidate–GO association records across the four stress conditions:
-                                20 under cold, 49 under drought, 46 under heat, and 69 under salinity.
-                                These values represent candidate–GO associations rather than unique genes,
-                                since an individual gene may be associated with more than one biological
-                                process or occur in multiple stress comparisons.
-                                The associations link individual differentially expressed metabolic-enzyme
-                                candidates to the enriched biological processes discussed previously.
-                                They provide a basis for examining which candidate genes belong to the
-                                gene sets associated with those processes under each stress condition.
-                            </p>
+
 
                             <section className="rl-enrichment-table-section">
 
                                 <div className="rl-enrichment-table-heading">
-                                    <span>TABLE 3</span>
+                                    <span>TABLE 2</span>
                                     <h3>
                                         Relationship Between Metabolic-Enzyme Candidates and Enriched Biological Processes
                                     </h3>
@@ -1235,7 +1222,7 @@ const ExerciseOne = () => {
                                     under each stress condition using padj ≤ 0.05 and |log₂FC| ≥ 1.
                                     Candidate–GO associations represent the subset of these genes
                                     associated with the significantly enriched GO biological
-                                    processes identified in Practice 1. The upregulated and
+                                    processes identified. The upregulated and
                                     downregulated counts in the process columns refer only to genes
                                     associated with the corresponding enriched process, not to the
                                     entire metabolic-enzyme candidate set. A gene may contribute to
@@ -1249,6 +1236,32 @@ const ExerciseOne = () => {
                             </section>
 
                             <p>
+                                To connect the candidate-level results with the enrichment analysis,
+                                the metabolic-enzyme candidates were cross-referenced against the significantly
+                                enriched GO biological processes identified previously. This produced 184
+                                non-empty candidate–GO association records across the four stress conditions:
+                                20 under cold, 49 under drought, 46 under heat, and 69 under salinity.
+                                These values represent candidate–GO associations rather than unique genes,
+                                since an individual gene may be associated with more than one biological
+                                process or occur in multiple stress comparisons.
+                                Further comparison was performed to examine whether the biological
+                                processes enriched across multiple stress conditions were supported by
+                                shared differentially expressed genes. For ethylene biosynthesis (GO:0009693),
+                                35 unique genes were identified across cold, drought and salinity stress, of
+                                which 18 were differentially expressed in at least two conditions. These shared genes were Zm00001d002535, Zm00001d002576, Zm00001d002592, Zm00001d003504, Zm00001d003533, Zm00001d005936, Zm00001d009568, Zm00001d017457, Zm00001d017645, Zm00001d018122, Zm00001d021978, Zm00001d024843, Zm00001d024853, Zm00001d025524, Zm00001d026060, Zm00001d034418, Zm00001d036348 and Zm00001d052189. 
+                                Among these shared genes, 17 exhibited consistent expression directions
+                                across the conditions in which they were identified, while Zm00001d024843 showed
+                                a contrasting response, being downregulated under drought but upregulated
+                                under salinity. Trehalose biosynthesis (GO:0005992), which was enriched
+                                under drought and salinity stress, contained 10 unique associated genes,
+                                8 of which were shared between the two conditions. These were Zm00001d005658, Zm00001d005687, Zm00001d012748, Zm00001d018342, Zm00001d020272, Zm00001d020396, Zm00001d032311 and Zm00001d052060. All eight shared genes
+                                were consistently downregulated under both stresses.
+
+                            </p>
+
+                           
+
+                            <p>
                                 Across the four stress comparisons, the analysis produced 3,956
                                 candidate–stress records representing 2,799 unique
                                 metabolic-enzyme candidate genes. 50 genes were detected as
@@ -1256,7 +1269,7 @@ const ExerciseOne = () => {
                                 three conditions, 637 in two conditions, and 1,927 in one condition.
                                 The candidate genes were ranked using adjusted p-values and absolute
                                 log2 fold changes to prioritise those showing stronger statistical
-                                evidence and larger expression changes. <strong>Table 2</strong> presents the five
+                                evidence and larger expression changes. <strong>Table 3</strong> presents the five
                                 highest-ranked candidates for each stress condition, together with
                                 their gene identifiers, expression estimates, and associated GO
                                 molecular-function annotations. The selected candidates included
@@ -1273,10 +1286,12 @@ const ExerciseOne = () => {
                             </p>
 
 
+
+
                             <section className="rl-enrichment-table-section">
 
                                 <div className="rl-enrichment-table-heading">
-                                    <span>TABLE 2</span>
+                                    <span>TABLE 3</span>
                                     <h3>
                                         Top-Ranked Metabolic-Enzyme Candidate Genes Across Stress Conditions
                                     </h3>
@@ -1371,7 +1386,91 @@ const ExerciseOne = () => {
 
                             </section>
 
-                            
+                            <p>
+                                Comparison of the 20 highly ranked metabolic-enzyme candidates in <strong>Table 3</strong> with the enriched biological processes showed
+                                that five candidates were associated with at least one of the identified
+                                processes. These comprised one candidate under drought stress, associated
+                                with raffinose catabolism, and four candidates under heat stress, all
+                                associated with protein folding. No overlap was observed among the
+                                top-five candidates under cold or salinity stress. The predominance
+                                of heat-associated candidates within the overlap reflects their
+                                association with the protein-folding process, which was significantly
+                                enriched under heat stress. However, the absence of an association
+                                for the remaining 15 candidates does not diminish their significance
+                                as differentially expressed metabolic-enzyme-associated genes.
+                            </p>
+
+ <section className="rl-enrichment-table-section">
+
+                                <div className="rl-enrichment-table-heading">
+                                    <span>TABLE 4</span>
+                                    <h3>
+                                        Overlap between the top-five metabolic-enzyme candidates and the biological processes enriched.
+                                    </h3>
+                                </div>
+
+                                <div className="rl-enrichment-table-scroll">
+                                    <table className="rl-enrichment-table">
+
+                                        <thead>
+                                            <tr>
+                                                <th>Stress</th>
+                                                <th>Number of Candidates associated</th>
+                                                <th>Candidate gene</th>
+                                                <th>Rank</th>
+                                                <th>Associated biological process</th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+
+                                            <tr>
+                                                <td>Cold</td>
+                                                <td>0/5</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>Drought</td>
+                                                <td>1/5</td>
+                                                <td>Zm00001d031300</td>
+                                                <td>5</td>
+                                                <td>Raffinose catabolic process</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>Heat</td>
+                                                <td>4/5</td>
+                                                <td>Zm00001d028408, Zm00001d014486, Zm00001d047302, Zm00001d037232</td>
+                                                <td>1, 3, 4, 5 respectively</td>
+                                                <td>Protein folding</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>Salinity</td>
+                                                <td>0/5</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                            </tr>
+
+                                        </tbody>
+
+                                    </table>
+                                </div>
+
+                                <p className="rl-enrichment-table-footnote">
+                                    The comparison examined the five highest-ranked candidates
+                                    under each stress condition. A dash indicates that none of
+                                    the five candidates was associated with a significantly
+                                    enriched biological process. Candidate ranks are specific
+                                    to their respective stress conditions.
+                                </p>
+
+                            </section>
+
 
                             <p>
                                 The TF analysis identified 1,672 mapped TF genes per stress
