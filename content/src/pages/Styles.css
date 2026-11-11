@@ -1639,6 +1639,62 @@
     }
 }
 
+
+.rl-candidate-gene {
+    color: #4f3903;
+    white-space: nowrap;
+    font-weight: 600;
+}
+
+.rl-candidate-fold-change {
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+    font-weight: 600;
+}
+
+.rl-expression-direction {
+    display: inline-block;
+    padding: 5px 9px;
+    border-radius: 4px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.rl-direction-up {
+    color: #780a0a;
+    background: #eaf5ed;
+}
+
+.rl-direction-down {
+    color: #0d0d71;
+    background: #f9eded;
+}
+
+.rl-candidate-go {
+    min-width: 190px;
+    line-height: 1.9;
+}
+
+.rl-go-id {
+    display: inline-block;
+    margin: 2px 4px 2px 0;
+    padding: 2px 6px;
+    border: 1px solid #e8dfc9;
+    border-radius: 4px;
+    background: #faf8f2;
+    color: #594719;
+    font-size: 0.78rem;
+    white-space: nowrap;
+}
+
+.rl-enrichment-table tbody tr td[rowspan] {
+    vertical-align: middle;
+    background: #faf8f2;
+    color: #4f3903;
+}
+
+
 /* Responsive adjustments */
 
 @media (max-width: 600px) {
