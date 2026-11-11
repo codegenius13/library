@@ -171,6 +171,129 @@ const rankedCandidateData = [
     },
 ];
 
+const q1Q2ConnectionData = [
+    {
+        stress: "Cold",
+        totalCandidates: 598,
+        totalUp: 315,
+        totalDown: 283,
+        processes: [
+            {
+                process: "Ethylene biosynthetic process",
+                go: "GO:0009693",
+                associatedGenes: 20,
+                up: 18,
+                down: 2,
+                direction: "Predominantly upregulated",
+            },
+        ],
+    },
+    {
+        stress: "Drought",
+        totalCandidates: 919,
+        totalUp: 467,
+        totalDown: 452,
+        processes: [
+            {
+                process: "Photosynthetic electron transport in photosystem I",
+                go: "GO:0009773",
+                associatedGenes: 10,
+                up: 0,
+                down: 10,
+                direction: "Predominantly downregulated",
+            },
+            {
+                process: "Raffinose catabolic process",
+                go: "GO:0034484",
+                associatedGenes: 5,
+                up: 2,
+                down: 3,
+                direction: "Mixed",
+            },
+            {
+                process: "Ethylene biosynthetic process",
+                go: "GO:0009693",
+                associatedGenes: 20,
+                up: 12,
+                down: 8,
+                direction: "Mixed",
+            },
+            {
+                process: "Trehalose biosynthetic process",
+                go: "GO:0005992",
+                associatedGenes: 9,
+                up: 0,
+                down: 9,
+                direction: "Predominantly downregulated",
+            },
+            {
+                process: "Amine catabolic process",
+                go: "GO:0009310",
+                associatedGenes: 5,
+                up: 1,
+                down: 4,
+                direction: "Predominantly downregulated",
+            },
+        ],
+    },
+    {
+        stress: "Heat",
+        totalCandidates: 1599,
+        totalUp: 908,
+        totalDown: 691,
+        processes: [
+            {
+                process: "Protein folding",
+                go: "GO:0006457",
+                associatedGenes: 46,
+                up: 41,
+                down: 5,
+                direction: "Predominantly upregulated",
+            },
+        ],
+    },
+    {
+        stress: "Salinity",
+        totalCandidates: 840,
+        totalUp: 569,
+        totalDown: 271,
+        processes: [
+            {
+                process: "Lignin biosynthetic process",
+                go: "GO:0009809",
+                associatedGenes: 16,
+                up: 15,
+                down: 1,
+                direction: "Predominantly upregulated",
+            },
+            {
+                process: "Jasmonic acid biosynthetic process",
+                go: "GO:0009695",
+                associatedGenes: 25,
+                up: 20,
+                down: 5,
+                direction: "Predominantly upregulated",
+            },
+            {
+                process: "Trehalose biosynthetic process",
+                go: "GO:0005992",
+                associatedGenes: 9,
+                up: 1,
+                down: 8,
+                direction: "Predominantly downregulated",
+            },
+            {
+                process: "Ethylene biosynthetic process",
+                go: "GO:0009693",
+                associatedGenes: 19,
+                up: 18,
+                down: 1,
+                direction: "Predominantly upregulated",
+            },
+        ],
+    },
+];
+
 
 const ExerciseOne = () => {
 
@@ -1001,6 +1124,131 @@ const ExerciseOne = () => {
                             </figure>
 
                             <p>
+                                To connect the candidate-level results with the enrichment analysis,
+                                the metabolic-enzyme candidates were cross-referenced against the significantly
+                                enriched GO biological processes identified previously. This produced 184
+                                non-empty candidate–GO association records across the four stress conditions:
+                                20 under cold, 49 under drought, 46 under heat, and 69 under salinity.
+                                These values represent candidate–GO associations rather than unique genes,
+                                since an individual gene may be associated with more than one biological
+                                process or occur in multiple stress comparisons.
+                                The associations link individual differentially expressed metabolic-enzyme
+                                candidates to the enriched biological processes discussed previously.
+                                They provide a basis for examining which candidate genes belong to the
+                                gene sets associated with those processes under each stress condition.
+                            </p>
+
+                            <section className="rl-enrichment-table-section">
+
+                                <div className="rl-enrichment-table-heading">
+                                    <span>TABLE 3</span>
+                                    <h3>
+                                        Relationship Between Metabolic-Enzyme Candidates and Enriched Biological Processes
+                                    </h3>
+                                </div>
+
+                                <div className="rl-enrichment-table-scroll">
+
+                                    <table className="rl-enrichment-table">
+
+                                        <thead>
+                                            <tr>
+                                                <th>Stress Condition</th>
+                                                <th>All Metabolic-Enzyme Candidates</th>
+                                                <th>Overall Upregulated</th>
+                                                <th>Overall Downregulated</th>
+                                                <th>Enriched Biological Process</th>
+                                                <th>GO Biological Process ID</th>
+                                                <th>Candidate–GO Associations</th>
+                                                <th>Upregulated Within Process</th>
+                                                <th>Downregulated Within Process</th>
+                                                <th>Expression Pattern</th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+
+                                            {q1Q2ConnectionData.map((group) => (
+
+                                                group.processes.map((process, index) => (
+
+                                                    <tr key={`${group.stress}-${process.go}`}>
+
+                                                        {index === 0 && (
+                                                            <>
+                                                                <td rowSpan={group.processes.length}>
+                                                                    {group.stress}
+                                                                </td>
+
+                                                                <td rowSpan={group.processes.length}>
+                                                                    {group.totalCandidates.toLocaleString()}
+                                                                </td>
+
+                                                                <td rowSpan={group.processes.length}>
+                                                                    {group.totalUp.toLocaleString()}
+                                                                </td>
+
+                                                                <td rowSpan={group.processes.length}>
+                                                                    {group.totalDown.toLocaleString()}
+                                                                </td>
+                                                            </>
+                                                        )}
+
+                                                        <td>{process.process}</td>
+
+                                                        <td>
+                                                            <strong>{process.go}</strong>
+                                                        </td>
+
+                                                        <td>
+                                                            {process.associatedGenes}
+                                                        </td>
+
+                                                        <td>
+                                                            {process.up}
+                                                        </td>
+
+                                                        <td>
+                                                            {process.down}
+                                                        </td>
+
+                                                        <td>
+                                                            {process.direction}
+                                                        </td>
+
+                                                    </tr>
+
+                                                ))
+
+                                            ))}
+
+                                        </tbody>
+
+                                    </table>
+
+                                </div>
+
+                                <p className="rl-enrichment-table-footnote">
+
+                                    The overall metabolic-enzyme candidate counts represent all
+                                    differentially expressed enzyme-associated genes identified
+                                    under each stress condition using padj ≤ 0.05 and |log₂FC| ≥ 1.
+                                    Candidate–GO associations represent the subset of these genes
+                                    associated with the significantly enriched GO biological
+                                    processes identified in Practice 1. The upregulated and
+                                    downregulated counts in the process columns refer only to genes
+                                    associated with the corresponding enriched process, not to the
+                                    entire metabolic-enzyme candidate set. A gene may contribute to
+                                    more than one GO association. Expression patterns were classified
+                                    using the 70% directional threshold. These results describe
+                                    transcript-level associations and do not establish pathway
+                                    activity, enzyme activity, or metabolic flux.
+
+                                </p>
+
+                            </section>
+
+                            <p>
                                 Across the four stress comparisons, the analysis produced 3,956
                                 candidate–stress records representing 2,799 unique
                                 metabolic-enzyme candidate genes. 50 genes were detected as
@@ -1123,97 +1371,7 @@ const ExerciseOne = () => {
 
                             </section>
 
-                            <p>
-                                To connect the candidate-level results with the enrichment analysis,
-                                the metabolic-enzyme candidates were cross-referenced against the significantly
-                                enriched GO biological processes identified previously. This produced 184
-                                non-empty candidate–GO association records across the four stress conditions:
-                                20 under cold, 49 under drought, 46 under heat, and 69 under salinity.
-                                These values represent candidate–GO associations rather than unique genes,
-                                since an individual gene may be associated with more than one biological
-                                process or occur in multiple stress comparisons.
-                                The associations link individual differentially expressed metabolic-enzyme
-                                candidates to the enriched biological processes discussed previously.
-                                They provide a basis for examining which candidate genes belong to the
-                                gene sets associated with those processes under each stress condition.
-                            </p>
-
-                            <section className="rl-enrichment-table-section">
-                                <div className="rl-enrichment-table-heading">
-                                    <span>TABLE 3</span>
-                                    <h3>
-                                        Relationship Between Metabolic-Enzyme Candidates and Enriched Biological Processes
-                                    </h3>
-                                </div>
-
-                                <div className="rl-enrichment-table-scroll">
-                                    <table className="rl-enrichment-table">
-
-                                        <thead>
-                                            <tr>
-                                                <th>Stress</th>
-                                                <th>All enzyme candidates</th>
-                                                <th>Upregulated</th>
-                                                <th>Downregulated</th>
-                                                <th>Candidates associated with enriched GO processes</th>
-                                            </tr>
-                                        </thead>
-
-                                        <tbody>
-
-                                            <tr>
-                                                <td>Cold</td>
-                                                <td>598</td>
-                                                <td>315</td>
-                                                <td>283</td>
-                                                <td>20</td>
-                                            </tr>
-
-                                            <tr>
-                                                <td>Drought</td>
-                                                <td>919</td>
-                                                <td>467</td>
-                                                <td>452</td>
-                                                <td>49</td>
-                                            </tr>
-
-                                            <tr>
-                                                <td>Heat</td>
-                                                <td>1,599</td>
-                                                <td>908</td>
-                                                <td>691</td>
-                                                <td>46</td>
-                                            </tr>
-
-                                            <tr>
-                                                <td>Salinity</td>
-                                                <td>840</td>
-                                                <td>569</td>
-                                                <td>271</td>
-                                                <td>69</td>
-                                            </tr>
-
-
-                                        </tbody>
-
-                                    </table>
-                                </div>
-                                <p className="rl-enrichment-table-footnote">
-                                    The overall metabolic-enzyme candidate counts represent all
-                                    differentially expressed enzyme-associated genes identified
-                                    under each stress condition using padj ≤ 0.05 and |log₂FC| ≥ 1.
-                                    Candidate–GO associations represent the subset of these genes
-                                    associated with the significantly enriched GO biological
-                                    processes identified in Practice 1. The upregulated and
-                                    downregulated counts in the process columns refer only to genes
-                                    associated with the corresponding enriched process, not to the
-                                    entire metabolic-enzyme candidate set. A gene may contribute to
-                                    more than one GO association. Expression patterns were classified
-                                    using the 70% directional threshold. These results describe
-                                    transcript-level associations and do not establish pathway
-                                    activity, enzyme activity, or metabolic flux.
-                                </p>
-                            </section>
+                            
 
                             <p>
                                 The TF analysis identified 1,672 mapped TF genes per stress
