@@ -8,7 +8,6 @@ import img03 from "../../assets/exerciseOne/img03.png";
 import img04 from "../../assets/exerciseOne/img04.png";
 import img05 from "../../assets/exerciseOne/img05.png";
 import img06 from "../../assets/exerciseOne/img06.png";
-import img07 from "../../assets/exerciseOne/img07.png";
 
 
 /* =========================================
@@ -953,11 +952,11 @@ const ExerciseOne = () => {
                                 </div>
 
                                 <figcaption className="rl-enrichment-figure-caption">
-                                    <strong>Figure 2.</strong> The heatmap compares the classification of 
+                                    <strong>Figure 2.</strong> The heatmap compares the classification of
                                     genes associated with ethylene biosynthetic process (GO:0009693)
                                     under cold, drought, heat, and salinity stress.
-                                    The heatmap displays the log2 fold change of each gene across the 
-                                    four stress conditions, with colour indicating the direction and 
+                                    The heatmap displays the log2 fold change of each gene across the
+                                    four stress conditions, with colour indicating the direction and
                                     magnitude of expression change.
                                 </figcaption>
 
@@ -994,17 +993,17 @@ const ExerciseOne = () => {
                             <h4>Practice 2</h4>
 
                             <p>
-                                The DESeq2 rebuild audit confirmed that 25,968 genes were tested 
-                                in each stress contrast, using an adjusted p-value (padj) 
-                                threshold of ≤ 0.05 and an absolute log₂ fold-change threshold 
-                                of ≥ 1. The rebuilt metabolic-enzyme annotation comprised 
-                                19,220 unique genes. Applying these criteria identified 
-                                616 metabolic-enzyme candidate genes under cold stress, 
-                                945 under drought, 1,657 under heat, and 864 under salinity. 
-                                Among these candidates, 323 were upregulated and 293 
-                                downregulated under cold stress; 478 were upregulated and 
-                                467 downregulated under drought; 948 were upregulated and 
-                                709 downregulated under heat; and 583 were upregulated and 
+                                The DESeq2 rebuild audit confirmed that 25,968 genes were tested
+                                in each stress contrast, using an adjusted p-value (padj)
+                                threshold of ≤ 0.05 and an absolute log₂ fold-change threshold
+                                of ≥ 1. The rebuilt metabolic-enzyme annotation comprised
+                                19,220 unique genes. Applying these criteria identified
+                                616 metabolic-enzyme candidate genes under cold stress,
+                                945 under drought, 1,657 under heat, and 864 under salinity.
+                                Among these candidates, 323 were upregulated and 293
+                                downregulated under cold stress; 478 were upregulated and
+                                467 downregulated under drought; 948 were upregulated and
+                                709 downregulated under heat; and 583 were upregulated and
                                 281 downregulated under salinity.
                             </p>
 
@@ -1120,45 +1119,45 @@ const ExerciseOne = () => {
                             </section>
 
                             <p>
-                                To connect the metabolic-enzyme candidate results with the 
-                                enrichment analysis, the candidates were cross-referenced against 
-                                the significantly enriched GO biological processes identified 
-                                under each stress condition. This produced 158 non-empty 
-                                candidate–GO association records across the four stress 
-                                conditions: 20 under cold, 15 under drought, 54 under heat, 
-                                and 69 under salinity. These records represent candidate–GO 
-                                associations rather than unique genes, as individual genes may 
-                                contribute to multiple biological-process associations or occur 
-                                across different stress comparisons. Further comparison examined 
-                                whether enriched biological processes identified under multiple 
-                                stress conditions were supported by shared differentially 
-                                expressed genes. Ethylene biosynthesis (GO:0009693), which was 
-                                significantly enriched under cold and salinity stress, contained 
-                                29 unique associated genes across the two conditions. Of these, 
-                                10 were shared between cold and salinity: Zm00001d002592, 
-                                Zm00001d003504, Zm00001d005936, Zm00001d017457, Zm00001d018122, 
-                                Zm00001d021978, Zm00001d024853, Zm00001d025524, Zm00001d026060, 
-                                and Zm00001d036348. All 10 shared genes exhibited consistent 
-                                expression directions across both conditions. Nine were 
-                                upregulated under both cold and salinity stress, while 
-                                Zm00001d036348 was downregulated under both conditions. 
-                                Thus, the shared ethylene-associated genes showed directional 
-                                consistency across the two stress conditions in which this 
+                                To connect the metabolic-enzyme candidate results with the
+                                enrichment analysis, the candidates were cross-referenced against
+                                the significantly enriched GO biological processes identified
+                                under each stress condition. This produced 158 non-empty
+                                candidate–GO association records across the four stress
+                                conditions: 20 under cold, 15 under drought, 54 under heat,
+                                and 69 under salinity. These records represent candidate–GO
+                                associations rather than unique genes, as individual genes may
+                                contribute to multiple biological-process associations or occur
+                                across different stress comparisons. Further comparison examined
+                                whether enriched biological processes identified under multiple
+                                stress conditions were supported by shared differentially
+                                expressed genes. Ethylene biosynthesis (GO:0009693), which was
+                                significantly enriched under cold and salinity stress, contained
+                                29 unique associated genes across the two conditions. Of these,
+                                10 were shared between cold and salinity: Zm00001d002592,
+                                Zm00001d003504, Zm00001d005936, Zm00001d017457, Zm00001d018122,
+                                Zm00001d021978, Zm00001d024853, Zm00001d025524, Zm00001d026060,
+                                and Zm00001d036348. All 10 shared genes exhibited consistent
+                                expression directions across both conditions. Nine were
+                                upregulated under both cold and salinity stress, while
+                                Zm00001d036348 was downregulated under both conditions.
+                                Thus, the shared ethylene-associated genes showed directional
+                                consistency across the two stress conditions in which this
                                 biological process was significantly enriched.
                             </p>
 
 
 
                             <p>
-                                Across the four stress comparisons, the analysis identified 4,082 
-                                candidate–stress records representing 2,885 unique metabolic-enzyme 
-                                candidate genes. Of these genes, 49 were identified across all four 
-                                stress conditions, 193 across three conditions, 664 across two conditions, 
-                                and 1,979 in only one condition. Candidate genes were ranked separately 
-                                for each stress using adjusted p-values in ascending order, followed 
-                                by absolute log₂ fold change in descending order. <strong>Table 3</strong> presents the 
-                                five highest-ranked candidates per stress, including their gene identifiers, 
-                                expression changes, regulation directions, and associated enzyme-related 
+                                Across the four stress comparisons, the analysis identified 4,082
+                                candidate–stress records representing 2,885 unique metabolic-enzyme
+                                candidate genes. Of these genes, 49 were identified across all four
+                                stress conditions, 193 across three conditions, 664 across two conditions,
+                                and 1,979 in only one condition. Candidate genes were ranked separately
+                                for each stress using adjusted p-values in ascending order, followed
+                                by absolute log₂ fold change in descending order. <strong>Table 3</strong> presents the
+                                five highest-ranked candidates per stress, including their gene identifiers,
+                                expression changes, regulation directions, and associated enzyme-related
                                 molecular-function GO annotations. The selected candidates included
                                 both upregulated and downregulated genes, with some showing relatively
                                 large expression changes. Zm00001d042107 was among the
@@ -1360,13 +1359,13 @@ const ExerciseOne = () => {
 
 
                             <p>
-                                The TF analysis identified 1,522 mapped TF genes tested per 
-                                stress comparison. Of these, 136 were significantly 
-                                differentially expressed under cold (101 upregulated and 35 
-                                downregulated), 173 under drought (89 upregulated and 84 
-                                downregulated), 212 under heat (126 upregulated and 86 
-                                downregulated), and 159 under salinity (97 upregulated and 62 
-                                downregulated), giving a total of 680 significant TF–stress 
+                                The TF analysis identified 1,522 mapped TF genes tested per
+                                stress comparison. Of these, 136 were significantly
+                                differentially expressed under cold (101 upregulated and 35
+                                downregulated), 173 under drought (89 upregulated and 84
+                                downregulated), 212 under heat (126 upregulated and 86
+                                downregulated), and 159 under salinity (97 upregulated and 62
+                                downregulated), giving a total of 680 significant TF–stress
                                 records.
                             </p>
 
@@ -1375,14 +1374,14 @@ const ExerciseOne = () => {
 
                                 <div className="rl-enrichment-figure-image">
                                     <img
-                                        src={img05}
-                                        alt="Bubble plot showing enriched metabolic biological processes under cold, drought, heat, and salinity stress in maize. Bubble position represents the negative logarithm of the adjusted p-value, bubble size represents DEG count, and bubble colour represents adjusted p-value."
+                                        src={img04}
+                                        alt="Bar plot showing the direction of differential expression among significant transcription-factor genes under cold, drought, heat, and salinity stress. TF genes were classified as significant using adjusted p-value ≤ 0.05 and absolute log2 fold change ≥ 1. Direction was determined by the sign of log2 fold change. The displayed counts refer to significant TF genes in each stress-versus-control comparison."
                                         loading="lazy"
                                     />
                                 </div>
 
                                 <figcaption className="rl-enrichment-figure-caption">
-                                    <strong>Figure 5.</strong> Direction of differential
+                                    <strong>Figure 4.</strong> Direction of differential
                                     expression among significant transcription-factor genes under
                                     cold, drought, heat, and salinity stress. TF genes were
                                     classified as significant using adjusted p-value ≤ 0.05
@@ -1395,28 +1394,28 @@ const ExerciseOne = () => {
                             </figure>
 
                             <p>
-                                The aggregated summary identified 46 transcription factor (TF) 
-                                families, comprising 428 unique TF genes represented across the 
-                                four stress comparisons. ERF was the most represented family, 
-                                with 52 unique genes, followed by MYB (33), WRKY (30), 
-                                MYB_related and bHLH (27 each), bZIP (26), NAC (23), HD-ZIP 
-                                (21), GRAS (19), C2H2 (18), ARF (16), and HSF (13). The 
-                                remaining families included G2-like, C3H, CO-like, Dof, GATA, 
-                                AP2, DBB, TALE, SBP, TCP, B3, HB-other, Nin-like, LBD, ARR-B, 
-                                LSD, NF-YA, RAV, Trihelix, ZF-HD, FAR1, GeBP, M-type_MADS, 
-                                NF-X1, CAMTA, CPP, E2F/DP, EIL, GRF, NF-YB, NF-YC, S1Fa-like, 
-                                STAT, and VOZ. Examination of the family distribution across 
-                                individual stress conditions showed that ERF was consistently 
-                                the most represented family, with 28, 26, 26, and 23 
-                                family-associated records under cold, drought, heat, and 
-                                salinity, respectively. Other prominent families included MYB, 
-                                MYB_related, WRKY, bHLH, and bZIP, although their representation 
-                                varied across conditions. Some families showed stronger 
-                                representation under particular stresses; for example, C2H2 and 
-                                HSF each had 13 and 12 records, respectively, under heat, while 
-                                WRKY had 15 records under cold and 14 under salinity. 
-                                These distributions identify TF families that may warrant 
-                                further investigation in relation to the observed 
+                                The aggregated summary identified 46 transcription factor (TF)
+                                families, comprising 428 unique TF genes represented across the
+                                four stress comparisons. ERF was the most represented family,
+                                with 52 unique genes, followed by MYB (33), WRKY (30),
+                                MYB_related and bHLH (27 each), bZIP (26), NAC (23), HD-ZIP
+                                (21), GRAS (19), C2H2 (18), ARF (16), and HSF (13). The
+                                remaining families included G2-like, C3H, CO-like, Dof, GATA,
+                                AP2, DBB, TALE, SBP, TCP, B3, HB-other, Nin-like, LBD, ARR-B,
+                                LSD, NF-YA, RAV, Trihelix, ZF-HD, FAR1, GeBP, M-type_MADS,
+                                NF-X1, CAMTA, CPP, E2F/DP, EIL, GRF, NF-YB, NF-YC, S1Fa-like,
+                                STAT, and VOZ. Examination of the family distribution across
+                                individual stress conditions showed that ERF was consistently
+                                the most represented family, with 28, 26, 26, and 23
+                                family-associated records under cold, drought, heat, and
+                                salinity, respectively. Other prominent families included MYB,
+                                MYB_related, WRKY, bHLH, and bZIP, although their representation
+                                varied across conditions. Some families showed stronger
+                                representation under particular stresses; for example, C2H2 and
+                                HSF each had 13 and 12 records, respectively, under heat, while
+                                WRKY had 15 records under cold and 14 under salinity.
+                                These distributions identify TF families that may warrant
+                                further investigation in relation to the observed
                                 stress-associated expression patterns.
                             </p>
 
@@ -1425,14 +1424,14 @@ const ExerciseOne = () => {
 
                                 <div className="rl-enrichment-figure-image">
                                     <img
-                                        src={img06}
-                                        alt="Bubble plot showing enriched metabolic biological processes under cold, drought, heat, and salinity stress in maize. Bubble position represents the negative logarithm of the adjusted p-value, bubble size represents DEG count, and bubble colour represents adjusted p-value."
+                                        src={img05}
+                                        alt="Bar plot showing the distribution of transcription-factor families across cold, drought, heat, and salinity stress conditions. The heatmap summarises TF-family representation in the analysed stress comparisons. Family assignment is based on the PlantTFDB-derived mapping used in the analysis. Family representation indicates annotation and differential-expression patterns, not confirmed regulatory activity."
                                         loading="lazy"
                                     />
                                 </div>
 
                                 <figcaption className="rl-enrichment-figure-caption">
-                                    <strong>Figure 6.</strong> Distribution of transcription-factor
+                                    <strong>Figure 5.</strong> Distribution of transcription-factor
                                     families across the four abiotic stress conditions. The heatmap
                                     summarises TF-family representation in the analysed stress
                                     comparisons. Family assignment is based on the PlantTFDB-derived
@@ -1444,25 +1443,25 @@ const ExerciseOne = () => {
                             </figure>
 
                             <p>
-                                The TF cross-stress expression matrix was used to compare the
-                                direction and magnitude of log₂ fold-change estimates for mapped
-                                TF genes across cold, drought, heat, and salinity conditions.
-                                However, these estimates alone do not establish statistical
-                                significance; a TF was considered significantly responsive in
-                                a particular stress condition only when its adjusted p-value
-                                and fold-change met the applied significance criteria.
-                                Zm00001d000112 showed positive log₂ fold changes under
-                                both heat (+1.9459) and salinity (+2.1434), and was confirmed
-                                as significantly differentially expressed in both conditions in
-                                the TF significance table. In contrast, Zm00001d000045 had a
-                                negative log₂ fold change under cold stress (−1.1118), but its
-                                adjusted p-value was not significant, so it cannot be classified
-                                as a significantly responsive TF under that condition.
-                                Zm00001d000303 showed a large positive log₂ fold
-                                change under salinity (+6.8254), but its statistical
-                                significance must be confirmed from the corresponding TF
-                                significance results before it can be described as significantly
-                                differentially expressed.
+                                The cross-stress expression analysis examined 1,522 mapped
+                                transcription factor (TF) genes across cold, drought, heat,
+                                and salinity conditions. Of these, 428 genes were significantly
+                                differentially expressed in at least one stress condition,
+                                comprising 261 genes responsive to only one stress, 102 shared
+                                between two stresses, 45 shared between three, and 20 significant
+                                across all four conditions. Among the 167 genes responsive to
+                                multiple stresses, 155 maintained consistent regulation
+                                directions, whereas 12 showed contrasting expression directions.
+                                To visualise prominent expression patterns, the 30 significant
+                                TF genes with the largest absolute log₂ fold changes among
+                                their significant comparisons were selected for the cross-stress
+                                heatmap. ERF was the most represented family in this selection,
+                                with 12 genes, followed by MYB with five genes, while HSF and
+                                WRKY contributed two genes each. Notably, Zm00001d043060 (WRKY)
+                                was consistently upregulated across all four conditions, whereas
+                                Zm00001d046204 (HSF) was significantly upregulated under drought
+                                and heat. In contrast, Zm00001d031796 (ERF) showed significant
+                                downregulation under drought only.
                             </p>
 
                             <figure className="rl-enrichment-figure">
@@ -1470,14 +1469,14 @@ const ExerciseOne = () => {
 
                                 <div className="rl-enrichment-figure-image">
                                     <img
-                                        src={img07}
-                                        alt="Bubble plot showing enriched metabolic biological processes under cold, drought, heat, and salinity stress in maize. Bubble position represents the negative logarithm of the adjusted p-value, bubble size represents DEG count, and bubble colour represents adjusted p-value."
+                                        src={img06}
+                                        alt="Heatmap showing cross-stress expression estimates of mapped transcription-factor genes under cold, drought, heat, and salinity conditions. The heatmap displays log2 fold-change estimates for TF genes across the four stress-versus-control comparisons. Expression direction and magnitude can be compared across conditions, but statistical significance must be interpreted using the corresponding adjusted p-values and the predefined fold-change threshold. Similar expression patterns indicate co-response and do not establish direct regulatory relationships."
                                         loading="lazy"
                                     />
                                 </div>
 
                                 <figcaption className="rl-enrichment-figure-caption">
-                                    <strong>Figure 7.</strong>  Cross-stress expression
+                                    <strong>Figure 6.</strong>  Cross-stress expression
                                     estimates of mapped transcription-factor genes under cold,
                                     drought, heat, and salinity conditions. The heatmap displays
                                     log2 fold-change estimates for TF genes across the four
