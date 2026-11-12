@@ -1360,13 +1360,14 @@ const ExerciseOne = () => {
 
 
                             <p>
-                                The TF analysis identified 1,672 mapped TF genes per stress
-                                comparison. Of these, 143 were significantly differentially
-                                expressed under cold (106 upregulated and 37 downregulated),
-                                182 under drought (95 upregulated and 87 downregulated), 224
-                                under heat (135 upregulated and 89 downregulated), and 164
-                                under salinity (100 upregulated and 64 downregulated),
-                                giving 713 significant TF–stress records.
+                                The TF analysis identified 1,522 mapped TF genes tested per 
+                                stress comparison. Of these, 136 were significantly 
+                                differentially expressed under cold (101 upregulated and 35 
+                                downregulated), 173 under drought (89 upregulated and 84 
+                                downregulated), 212 under heat (126 upregulated and 86 
+                                downregulated), and 159 under salinity (97 upregulated and 62 
+                                downregulated), giving a total of 680 significant TF–stress 
+                                records.
                             </p>
 
                             <figure className="rl-enrichment-figure">
@@ -1394,25 +1395,29 @@ const ExerciseOne = () => {
                             </figure>
 
                             <p>
-                                The aggregated summary identified 48 transcription factor (TF)
-                                families, with ERF having the highest reported count of 54 unique
-                                TF genes, followed by MYB (35), MYB_related and WRKY (31 each),
-                                bHLH (29), bZIP (26), NAC (24), HD-ZIP (22), GRAS (19), C2H2 (18),
-                                ARF (16), and HSF (14). The remaining families included G2-like,
-                                C3H, Dof, GATA, CO-like, AP2, DBB, TCP, TALE, SBP, LBD, B3, NF-YA,
-                                ARR-B, FAR1, RAV, Trihelix, GRF, LSD, ZF-HD, M-type_MADS, NF-X1,
-                                MIKC_MADS, GeBP, E2F/DP, NF-YB, EIL, CAMTA, CPP, STAT, S1Fa-like,
-                                NF-YC, and VOZ. When the significant TFs were examined separately
-                                by stress condition, ERF was consistently among the most
-                                represented families, with 28 records under cold, 25 under
-                                drought, 24 under heat, and 23 under salinity. Other repeatedly
-                                represented families included MYB, bHLH, and bZIP, although
-                                their counts varied across the stress comparisons. Some families
-                                showed greater representation under particular conditions; such
-                                as HSF which had 13 significant TF records under heat, while
-                                WRKY had 16 under cold and 14 under salinity. These patterns
-                                highlight TF families that may warrant further investigation
-                                in relation to the observed stress responses.
+                                The aggregated summary identified 46 transcription factor (TF) 
+                                families, comprising 428 unique TF genes represented across the 
+                                four stress comparisons. ERF was the most represented family, 
+                                with 52 unique genes, followed by MYB (33), WRKY (30), 
+                                MYB_related and bHLH (27 each), bZIP (26), NAC (23), HD-ZIP 
+                                (21), GRAS (19), C2H2 (18), ARF (16), and HSF (13). The 
+                                remaining families included G2-like, C3H, CO-like, Dof, GATA, 
+                                AP2, DBB, TALE, SBP, TCP, B3, HB-other, Nin-like, LBD, ARR-B, 
+                                LSD, NF-YA, RAV, Trihelix, ZF-HD, FAR1, GeBP, M-type_MADS, 
+                                NF-X1, CAMTA, CPP, E2F/DP, EIL, GRF, NF-YB, NF-YC, S1Fa-like, 
+                                STAT, and VOZ. Examination of the family distribution across 
+                                individual stress conditions showed that ERF was consistently 
+                                the most represented family, with 28, 26, 26, and 23 
+                                family-associated records under cold, drought, heat, and 
+                                salinity, respectively. Other prominent families included MYB, 
+                                MYB_related, WRKY, bHLH, and bZIP, although their representation 
+                                varied across conditions. Some families showed stronger 
+                                representation under particular stresses; for example, C2H2 and 
+                                HSF each had 13 and 12 records, respectively, under heat, while 
+                                WRKY had 15 records under cold and 14 under salinity. 
+                                These distributions identify TF families that may warrant 
+                                further investigation in relation to the observed 
+                                stress-associated expression patterns.
                             </p>
 
                             <figure className="rl-enrichment-figure">
