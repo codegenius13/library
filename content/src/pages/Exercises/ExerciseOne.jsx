@@ -1484,11 +1484,65 @@ const ExerciseOne = () => {
                                     magnitude can be compared across conditions, but statistical
                                     significance must be interpreted using the corresponding
                                     adjusted p-values and the predefined fold-change threshold.
-                                    Similar expression patterns indicate co-response and do not
-                                    establish direct regulatory relationships.
+                                    The (*) indicates that the gene met the significance criteria in that stress comparison.
                                 </figcaption>
 
                             </figure>
+
+                            <p>
+                                Comparison of the significant transcription factor (TF) genes
+                                with the metabolic enzyme candidate genes identified 31
+                                stress-specific overlap records across the four stress
+                                conditions. These comprised 10 records under cold, 7 under
+                                drought, 8 under heat, and 6 under salinity stress.
+                                16 records were upregulated and 15 were downregulated.
+                                The expression patterns varied across conditions, with
+                                predominantly upregulated overlap genes under cold (7 upregulated,
+                                3 downregulated), predominantly downregulated genes under
+                                drought (3 upregulated, 4 downregulated) and salinity
+                                (2 upregulated, 4 downregulated), while heat showed an equal
+                                distribution (4 upregulated and 4 downregulated). These
+                                overlaps identify genes annotated as both TFs and metabolic
+                                enzyme candidates that responded significantly under the same
+                                stress condition. Further integration of TF expression patterns
+                                with the enriched biological processes revealed eight
+                                stress–process combinations across the four conditions.
+                                Under cold stress, ethylene biosynthetic process was enriched,
+                                with 18 of its 20 associated metabolic enzyme candidate genes
+                                upregulated. This response occurred alongside 136 significantly
+                                differentially expressed TF genes, comprising 101 upregulated
+                                and 35 downregulated genes, with ERF being the most represented
+                                TF family (28 genes). Under drought stress, photosynthetic
+                                electron transport in photosystem I was enriched, and all 10
+                                associated metabolic enzyme candidate genes were downregulated.
+                                In contrast, raffinose catabolic process showed a mixed
+                                expression pattern, with two of its five associated genes
+                                upregulated and three downregulated. The drought TF response
+                                comprised 89 upregulated and 84 downregulated genes, with ERF
+                                (26 genes) being the most represented family. Under heat stress,
+                                protein folding was enriched, with 45 of the 54 associated
+                                metabolic enzyme candidate genes upregulated and nine
+                                downregulated. This occurred alongside 212 significant TF
+                                genes, comprising 126 upregulated and 86 downregulated genes.
+                                ERF was again the most represented TF family, with 26 genes,
+                                followed by MYB (20) and MYB_related and bHLH (15 each). Under
+                                salinity stress, four enriched processes were identified.
+                                Trehalose biosynthetic process showed predominantly downregulated
+                                associated genes (eight of nine), whereas ethylene biosynthetic
+                                process showed predominantly upregulated genes (18 of 19).
+                                Jasmonic acid biosynthetic process had 20 upregulated and five
+                                downregulated genes, while lignin biosynthetic process had 15
+                                upregulated and one downregulated gene. The salinity TF response
+                                comprised 97 upregulated and 62 downregulated genes, with ERF
+                                (23 genes), MYB (17) and WRKY (14) being the most represented
+                                families. Despite the observed overlap between TF and metabolic
+                                enzyme candidate genes, comparison of these genes with the
+                                process-associated metabolic enzyme candidates identified no
+                                gene that simultaneously satisfied all three criteria under the
+                                same stress condition. Thus, the integrated patterns reflect
+                                concurrent stress-associated expression responses among different
+                                gene groups rather than a direct three-way gene overlap.
+                            </p>
 
                         </div>
 
