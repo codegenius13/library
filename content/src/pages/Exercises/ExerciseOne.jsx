@@ -174,9 +174,9 @@ const rankedCandidateData = [
 const q1Q2ConnectionData = [
     {
         stress: "Cold",
-        totalCandidates: 598,
-        totalUp: 315,
-        totalDown: 283,
+        totalCandidates: 616,
+        totalUp: 323,
+        totalDown: 293,
         processes: [
             {
                 process: "Ethylene biosynthetic process",
@@ -190,9 +190,9 @@ const q1Q2ConnectionData = [
     },
     {
         stress: "Drought",
-        totalCandidates: 919,
-        totalUp: 467,
-        totalDown: 452,
+        totalCandidates: 945,
+        totalUp: 478,
+        totalDown: 467,
         processes: [
             {
                 process: "Photosynthetic electron transport in photosystem I",
@@ -210,53 +210,29 @@ const q1Q2ConnectionData = [
                 down: 3,
                 direction: "Mixed",
             },
-            {
-                process: "Ethylene biosynthetic process",
-                go: "GO:0009693",
-                associatedGenes: 20,
-                up: 12,
-                down: 8,
-                direction: "Mixed",
-            },
-            {
-                process: "Trehalose biosynthetic process",
-                go: "GO:0005992",
-                associatedGenes: 9,
-                up: 0,
-                down: 9,
-                direction: "Predominantly downregulated",
-            },
-            {
-                process: "Amine catabolic process",
-                go: "GO:0009310",
-                associatedGenes: 5,
-                up: 1,
-                down: 4,
-                direction: "Predominantly downregulated",
-            },
         ],
     },
     {
         stress: "Heat",
-        totalCandidates: 1599,
-        totalUp: 908,
-        totalDown: 691,
+        totalCandidates: 1657,
+        totalUp: 948,
+        totalDown: 709,
         processes: [
             {
                 process: "Protein folding",
                 go: "GO:0006457",
-                associatedGenes: 46,
-                up: 41,
-                down: 5,
+                associatedGenes: 54,
+                up: 45,
+                down: 9,
                 direction: "Predominantly upregulated",
             },
         ],
     },
     {
         stress: "Salinity",
-        totalCandidates: 840,
-        totalUp: 569,
-        totalDown: 271,
+        totalCandidates: 864,
+        totalUp: 583,
+        totalDown: 281,
         processes: [
             {
                 process: "Lignin biosynthetic process",
@@ -697,14 +673,15 @@ const ExerciseOne = () => {
                         <div className="rl-content-placeholder">
                             <h4>Practice 1</h4>
 
-                            <p> The analysis used 18,585 metabolic-enzyme genes, 25,968 genes
-                                tested in the DESeq2 analysis, and 34,679 genes represented in
-                                the GO biological-process annotation. Their intersection
-                                produced a final enrichment background of 12,051 genes,
-                                containing 31,281 GO biological-process gene-term associations.
-                                This background represents metabolic-enzyme genes that were
-                                tested in the differential expression analysis and had GO BP
-                                annotation
+                            <p> The analysis used 19,220 eligible metabolic-enzyme genes,
+                                25,968 genes tested in the DESeq2 analysis, and 34,679 genes
+                                represented in the GO biological-process annotation.
+                                Their intersection produced a final enrichment background
+                                of 12,418 genes, containing 38,379 unique GO biological-process
+                                gene–term associations. This background represents
+                                metabolic-enzyme genes that were tested in the differential
+                                expression analysis and had GO biological-process annotations
+                                available for enrichment analysis.
                             </p>
 
                             <section className="rl-enrichment-table-section">
@@ -734,7 +711,7 @@ const ExerciseOne = () => {
                                             <tr>
                                                 <td>Background composition</td>
                                                 <td>Metabolic-enzyme genes</td>
-                                                <td>18,585</td>
+                                                <td>19,220</td>
                                                 <td>—</td>
                                                 <td>—</td>
                                             </tr>
@@ -758,7 +735,7 @@ const ExerciseOne = () => {
                                             <tr>
                                                 <td>Background composition</td>
                                                 <td>Final enrichment background</td>
-                                                <td>12,051</td>
+                                                <td>12,418</td>
                                                 <td>—</td>
                                                 <td>—</td>
                                             </tr>
@@ -766,7 +743,7 @@ const ExerciseOne = () => {
                                             <tr>
                                                 <td>Background composition</td>
                                                 <td>GO BP gene-term associations</td>
-                                                <td>31,281</td>
+                                                <td>38,379</td>
                                                 <td>—</td>
                                                 <td>—</td>
                                             </tr>
@@ -774,32 +751,32 @@ const ExerciseOne = () => {
                                             <tr>
                                                 <td>DEG input retention</td>
                                                 <td>Cold</td>
-                                                <td>598</td>
-                                                <td>598</td>
+                                                <td>616</td>
+                                                <td>616</td>
                                                 <td>0</td>
                                             </tr>
 
                                             <tr>
                                                 <td>DEG input retention</td>
                                                 <td>Drought</td>
-                                                <td>919</td>
-                                                <td>919</td>
+                                                <td>945</td>
+                                                <td>945</td>
                                                 <td>0</td>
                                             </tr>
 
                                             <tr>
                                                 <td>DEG input retention</td>
                                                 <td>Heat</td>
-                                                <td>1,599</td>
-                                                <td>1,599</td>
+                                                <td>1,657</td>
+                                                <td>1,657</td>
                                                 <td>0</td>
                                             </tr>
 
                                             <tr>
                                                 <td>DEG input retention</td>
                                                 <td>Salinity</td>
-                                                <td>840</td>
-                                                <td>840</td>
+                                                <td>864</td>
+                                                <td>864</td>
                                                 <td>0</td>
                                             </tr>
 
@@ -809,208 +786,132 @@ const ExerciseOne = () => {
                                 </div>
 
                                 <p className="rl-enrichment-table-footnote">
-                                    GO BP, Gene Ontology Biological Process; DEG, differentially expressed
-                                    gene. The final enrichment background represents the intersection of
-                                    metabolic-enzyme genes, DESeq2-tested genes, and GO BP-annotated genes.
+                                    GO BP, Gene Ontology Biological Process; DEG, differentially
+                                    expressed gene. The final enrichment background represents
+                                    the intersection of eligible metabolic-enzyme genes,
+                                    DESeq2-tested genes, and GO BP-annotated genes.
                                 </p>
 
                             </section>
 
                             <p>
-                                All genes in the four stress-specific metabolic-enzyme DEG
-                                sets were retained in the final background: 598/598 for cold,
-                                919/919 for drought, 1,599/1,599 for heat, and 840/840 for
-                                salinity. No input genes were excluded during background
-                                matching. This provides a consistency check for the
-                                enrichment input sets. Across the four stress conditions, 11 significant GO
+                                All genes in the four stress-specific metabolic-enzyme DEG sets
+                                were retained in the final enrichment background: 616/616 for
+                                cold, 945/945 for drought, 1,657/1,657 for heat, and 864/864 for
+                                salinity. No input genes were excluded during background matching,
+                                providing a consistency check for the enrichment input sets.
+                                Across the four stress conditions, eight significant GO
                                 biological-process term–stress associations were identified,
-                                representing eight distinct GO terms. These comprised one
-                                association under cold stress, five under drought stress,
-                                one under heat stress, and four under salinity stress.
-                                Ethylene biosynthetic process was enriched under cold,
-                                drought, and salinity stress, while trehalose biosynthetic
-                                process was enriched under drought and salinity stress. Under cold stress, ethylene biosynthetic process (GO:0009693) was
-                                significantly enriched among the metabolic-enzyme genes, with a
-                                GeneRatio of 20/598. In the enrichment background, 112 genes were
-                                associated with this term. The reported RichFactor was 0.1786,
-                                FoldEnrichment was 3.5986, and zScore was 6.3132. The nominal
-                                p-value was 5.3480 × 10⁻⁷, with an adjusted p-value of 1.8344 ×
-                                10⁻⁴ and q-value of 1.7339 × 10⁻⁴. Expression-direction analysis
-                                showed that 18 of the 20 contributing genes were upregulated
-                                (90.0%), whereas two genes (10.0%) were downregulated. The median
-                                log2 fold change was 3.3816 and the mean log2 fold change was
-                                3.4664. Thus, the contributing genes displayed a predominantly
-                                upregulated transcriptional pattern under cold stress. This
-                                indicates that ethylene-biosynthesis-associated genes were
-                                overrepresented among the cold-responsive metabolic-enzyme genes,
-                                with most showing increased transcript abundance relative to the
-                                control.
+                                representing seven distinct GO terms. These comprised one
+                                association under cold stress, two under drought stress, one
+                                under heat stress, and four under salinity stress. Ethylene
+                                biosynthetic process was enriched under cold and salinity
+                                stress. Under cold stress, ethylene biosynthetic process
+                                (GO:0009693) was significantly enriched among the
+                                metabolic-enzyme genes, with a GeneRatio of 20/616 and a
+                                background ratio of 112/12,418. The RichFactor was 0.1786,
+                                while the FoldEnrichment was 3.5998. The nominal p-value
+                                was 5.3476 × 10⁻⁷, with an adjusted p-value of 3.4171 × 10⁻⁴.
+                                Expression-direction analysis showed that 18 of the 20
+                                contributing genes were upregulated (90.0%), whereas two
+                                (10.0%) were downregulated. The median log2 fold change was
+                                3.3816 and the mean was 3.4664, indicating a predominantly
+                                upregulated transcriptional pattern under cold stress. These
+                                results indicate that ethylene-biosynthesis-associated genes
+                                were overrepresented among the cold-responsive metabolic-enzyme
+                                genes, with most showing increased transcript abundance relative
+                                to the control.
                             </p>
 
                             <p>
-                                Under drought stress, five significantly enriched biological
+                                Under drought stress, two significantly enriched GO biological
                                 processes displayed different gene-level expression patterns.
                                 Photosynthetic electron transport in photosystem I (GO:0009773)
-                                had a GeneRatio of 10/919, with 28 background genes annotated to
-                                the process. Its RichFactor was 0.3571, FoldEnrichment was
-                                4.6833, and zScore was 5.6062. The nominal p-value was
-                                2.3349 × 10⁻⁵, while the adjusted p-value was 0.00876 and the
-                                q-value was 0.00816. All 10 contributing genes were downregulated,
-                                with a median log2 fold change of −1.7165 and a mean of −1.9385.
-                                This provides a consistent negative expression pattern among
-                                the genes annotated to photosystem I electron transport. The
-                                result should, however, be described as downregulation of
-                                photosystem I electron-transport-associated genes rather than
-                                direct evidence that photosynthetic electron transport or
-                                photosynthetic efficiency was reduced, since neither was directly
-                                measured in this analysis. Raffinose catabolic process
-                                (GO:0034484) had a GeneRatio of 5/919, with eight background
-                                genes annotated to the term. The RichFactor was 0.6250,
-                                FoldEnrichment was 8.1957, and zScore was 5.8495. Its nominal
-                                p-value was 1.1758 × 10⁻⁴, adjusted p-value was 0.02205, and
-                                q-value was 0.02055. Two of the five contributing genes were
-                                upregulated (40.0%) and three were downregulated (60.0%). The
-                                median log2 fold change was −2.7211 and the mean was −2.2742.
-                                Under the 70% directional classification rule, this was
-                                classified as a mixed response rather than predominantly
-                                upregulated or downregulated. Although raffinose-catabolism-
-                                associated genes were overrepresented, their mixed directions
-                                do not support describing the process as uniformly activated
-                                or repressed at the transcript level. The negative mean and
-                                median indicate a negative central tendency but do not override
-                                the mixed gene-level pattern. Ethylene biosynthetic process
-                                (GO:0009693) was also enriched under drought stress, with a
-                                GeneRatio of 20/919 and 112 background genes annotated to the
-                                term. Its RichFactor was 0.1786, FoldEnrichment was 2.3416,
-                                and zScore was 4.0985. The nominal p-value was 2.7955 × 10⁻⁴,
-                                adjusted p-value was 0.03417, and q-value was 0.03184. Twelve
-                                of the 20 contributing genes were upregulated (60.0%), while
-                                eight were downregulated (40.0%). The median log2 fold change
-                                was 2.2443 and the mean was 1.7586. Neither direction reached
-                                the 70% classification threshold, so the term was classified
-                                as mixed. The positive mean and median indicate a positive
-                                central tendency, but the gene counts support a more cautious
-                                interpretation of the overall response. Trehalose biosynthetic
-                                process (GO:0005992) had a GeneRatio of 9/919, with 31
-                                background genes annotated to the term. Its RichFactor was
-                                0.2903, FoldEnrichment was 3.8070, and zScore was 4.4962.
-                                The nominal p-value was 3.6446 × 10⁻⁴, adjusted p-value was
-                                0.03417, and q-value was 0.03184. All nine contributing genes
-                                were downregulated, with a median log2 fold change of −3.4269
-                                and a mean of −3.2875. This represents a uniformly negative
-                                expression direction among the genes contributing to the
-                                enriched term. The result identifies trehalose-biosynthesis-
-                                associated genes as an enriched group among drought-responsive
-                                metabolic-enzyme genes, but does not establish a decrease in
-                                trehalose abundance or metabolic flux. Amine catabolic
-                                process (GO:0009310) had a GeneRatio of 5/919, with 10
-                                background genes annotated to the term. Its RichFactor was
-                                0.5000, FoldEnrichment was 6.5566, and zScore was 5.0506.
-                                The nominal p-value was 4.6474 × 10⁻⁴, adjusted p-value was
-                                0.03486, and q-value was 0.03248. One contributing gene was
-                                upregulated (20.0%) and four were downregulated (80.0%).
-                                The median log2 fold change was −1.5461 and the mean was
-                                −0.8467. This process was therefore classified as predominantly
-                                downregulated under the 70% rule. Drought stress
-                                was associated with enriched processes showing different
-                                transcriptional patterns. Photosystem I electron-transport-
-                                associated genes and trehalose-biosynthesis-associated genes
-                                were uniformly downregulated, while amine catabolism was
-                                predominantly downregulated. Raffinose catabolism and ethylene
-                                biosynthesis displayed mixed gene-level directions.
+                                had a GeneRatio of 10/945, with 28 background genes annotated
+                                to the term. Its RichFactor was 0.3571 and FoldEnrichment was
+                                4.6931. The nominal p-value was 2.2947 × 10⁻⁵, while both the
+                                adjusted p-value and q-value were 0.01466. All 10 contributing
+                                genes were downregulated (100%), with a median log2 fold change
+                                of −1.7165 and a mean of −1.9385. This indicates a consistently
+                                negative expression pattern among the genes associated with
+                                photosystem I electron transport. The results are interpreted
+                                as downregulation of photosystem I
+                                electron-transport-associated genes. Raffinose
+                                catabolic process (GO:0034484) had a GeneRatio of 5/945, with
+                                eight background genes annotated to the term. Its RichFactor was
+                                0.6250 and FoldEnrichment was 8.2130. The nominal p-value was
+                                1.1643 × 10⁻⁴, with an adjusted p-value and q-value of 0.03720.
+                                Two of the five contributing genes were upregulated (40%), while
+                                three were downregulated (60%). The median log2 fold change was
+                                −2.7211 and the mean was −2.2742. Under the 70% directional
+                                classification rule, this response was classified as mixed
+                                rather than predominantly upregulated or downregulated.
                             </p>
 
                             <p>
                                 Under heat stress, protein folding (GO:0006457) was the only
-                                significantly enriched biological process among the
-                                heat-responsive metabolic-enzyme genes. The term had a
-                                GeneRatio of 46/1,599, while 188 background genes were annotated
-                                to protein folding. The RichFactor was 0.2447,
-                                FoldEnrichment was 1.8441, and zScore was 4.5622. The nominal
-                                p-value was 2.0968 × 10⁻⁵, with an adjusted p-value of 0.01002
-                                and q-value of 0.00945. Forty-one of the 46 contributing genes
-                                were upregulated (89.1%), while five were downregulated (10.9%).
-                                The median log2 fold change was 3.1988 and the mean was 3.4639.
-                                The term was therefore classified as predominantly upregulated.
-                                This indicates that protein-folding-associated genes were
+                                significantly enriched GO biological process among the
+                                heat-responsive metabolic-enzyme genes. The term had a GeneRatio
+                                of 54/1,657, with 211 background genes annotated to protein
+                                folding. Its RichFactor was 0.2559 and FoldEnrichment was 1.9180.
+                                The nominal p-value was 1.1446 × 10⁻⁶, while both the adjusted
+                                p-value and q-value were 0.0007314. Of the 54 contributing genes,
+                                45 were upregulated (83.3%), while nine were downregulated
+                                (16.7%). The median log2 fold change was 2.9243 and the mean
+                                was 3.1873. The term was therefore classified as predominantly
+                                upregulated under the 70% directional classification rule. This
+                                indicates that protein-folding-associated genes were
                                 overrepresented among the heat-responsive metabolic-enzyme
-                                genes, with most showing increased transcript abundance.
-                                The pattern is compatible with a heat-associated transcriptional
-                                response involving protein folding and proteostasis-related
-                                functions. However, protein folding is reported here as a
-                                Gene Ontology biological process rather than a canonical
-                                metabolic pathway.
+                                genes, with most showing increased transcript abundance. The
+                                pattern is consistent with a heat-associated transcriptional
+                                response involving protein-folding functions.
                             </p>
 
                             <p>
-                                Under salinity stress, four biological processes were
-                                significantly enriched, with most contributing genes showing
-                                predominantly positive or negative expression directions.
-                                Lignin biosynthetic process (GO:0009809) had a GeneRatio of
-                                16/840, with 63 background genes annotated to the process.
-                                Its RichFactor was 0.2540, FoldEnrichment was 3.6435, and
-                                zScore was 5.7583. The nominal p-value was 4.4102 × 10⁻⁶,
-                                with an adjusted p-value of 0.001596 and q-value of 0.001504.
-                                Fifteen of the 16 contributing genes were upregulated (93.75%),
-                                while one was downregulated (6.25%). The median log2 fold
-                                change was 2.9084 and the mean was 2.7139. This represents
-                                a predominantly upregulated expression pattern among the
-                                genes contributing to the enriched lignin-biosynthesis term.
-                                The finding indicates overrepresentation and predominantly
-                                increased expression of lignin-biosynthesis-associated genes
-                                under salinity stress. It is consistent with a transcriptional
-                                response involving cell-wall-related biosynthetic functions,
-                                but does not establish increased lignin content or cell-wall
-                                deposition. Jasmonic acid biosynthetic process (GO:0009695)
-                                had a GeneRatio of 25/840, compared with 140 background genes
-                                annotated to the term. The RichFactor was 0.1786,
-                                FoldEnrichment was 2.5619, and zScore was 5.0880. The nominal
-                                p-value was 1.1273 × 10⁻⁵, adjusted p-value was 0.002041,
-                                and q-value was 0.001923. Twenty of the 25 contributing genes
+                                Under salinity stress, four GO biological processes were
+                                significantly enriched, with their contributing genes displaying
+                                predominantly positive or negative expression patterns. Lignin
+                                biosynthetic process (GO:0009809) had a GeneRatio of 16/864,
+                                with 63 background genes annotated to the term. Its RichFactor
+                                was 0.2540 and FoldEnrichment was 3.6502. The nominal p-value
+                                was 4.3180 × 10⁻⁶, while both the adjusted p-value and q-value
+                                were 0.002065. Fifteen of the 16 contributing genes were
+                                upregulated (93.75%), while one was downregulated (6.25%).
+                                The median log2 fold change was 2.9084 and the mean was 2.7139.
+                                The term was therefore classified as predominantly upregulated.
+                                This indicates that lignin-biosynthesis-associated genes were
+                                overrepresented among the salinity-responsive metabolic-enzyme
+                                genes, with most showing increased transcript abundance.
+                                Jasmonic acid biosynthetic process (GO:0009695) had a GeneRatio
+                                of 25/864, with 136 background genes annotated to the term.
+                                Its RichFactor was 0.1838 and FoldEnrichment was 2.6420. The
+                                nominal p-value was 6.4644 × 10⁻⁶, with an adjusted p-value
+                                and q-value of 0.002065. Twenty of the 25 contributing genes
                                 were upregulated (80.0%), while five were downregulated
-                                (20.0%). The median log2 fold change was 2.7149 and the mean
-                                was 2.2883. The term was classified as predominantly
-                                upregulated. This enrichment indicates that jasmonic-acid-
-                                biosynthesis-associated genes were overrepresented among
-                                salinity-responsive metabolic-enzyme genes, with most showing
-                                increased transcript abundance. It is consistent with a
-                                transcriptional response involving jasmonate-associated
-                                biosynthetic processes, but does not demonstrate increased
-                                jasmonic acid concentration or establish that jasmonate
-                                signalling caused the observed stress response. Trehalose
-                                biosynthetic process (GO:0005992) had a GeneRatio of 9/840,
-                                with 31 background genes annotated to the term. Its RichFactor
-                                was 0.2903, FoldEnrichment was 4.1651, and zScore was 4.8298.
-                                The nominal p-value was 1.8537 × 10⁻⁴, with an adjusted
-                                p-value of 0.02237 and q-value of 0.02107. One of the nine
-                                contributing genes was upregulated (11.1%), while eight were
-                                downregulated (88.9%). The median log2 fold change was
-                                −2.3138 and the mean was −1.8596. The term was therefore
-                                predominantly downregulated. This finding is notable because
-                                trehalose biosynthetic process was also significantly enriched
-                                under drought stress, where all nine contributing genes were
-                                downregulated. The repeated enrichment and predominantly
-                                negative expression direction across these two conditions
-                                suggest a shared transcriptional pattern among trehalose-
-                                biosynthesis-associated genes under drought and salinity.
-                                This should not be interpreted as direct evidence of reduced
-                                trehalose content or metabolic flux. Ethylene biosynthetic
-                                process (GO:0009693) had a GeneRatio of 19/840, with 112
-                                background genes annotated to the term. The RichFactor was
-                                0.1696, FoldEnrichment was 2.4338, and zScore was 4.1727.
-                                The nominal p-value was 2.4929 × 10⁻⁴, adjusted p-value was
-                                0.02256, and q-value was 0.02125. Eighteen of the 19
-                                contributing genes were upregulated (94.7%), while one was
-                                downregulated (5.3%). The median log2 fold change was 2.9599
-                                and the mean was 3.4608. The term was classified as
-                                predominantly upregulated. Together with the cold-stress
-                                result, this supports repeated enrichment of ethylene-
-                                biosynthesis-associated genes with predominantly positive
-                                expression directions under cold and salinity conditions.
-                                Under drought, the same GO term was enriched but showed a
-                                mixed gene-level direction. Therefore, the shared GO
-                                annotation does not imply an identical transcriptional
-                                response across all stress conditions.
+                                (20.0%). The median log2 fold change was 2.7149 and the mean was
+                                2.2883. The term was classified as predominantly upregulated.
+                                This enrichment indicates that jasmonic-acid-biosynthesis-associated
+                                genes were overrepresented among the salinity-responsive metabolic-enzyme
+                                genes, with most showing increased transcript abundance.
+                                Trehalose biosynthetic process (GO:0005992) had a GeneRatio of
+                                9/864, with 31 background genes annotated to the term. Its
+                                RichFactor was 0.2903 and FoldEnrichment was 4.1727. The nominal
+                                p-value was 1.8296 × 10⁻⁴, while both the adjusted p-value and
+                                q-value were 0.03897. One of the nine contributing genes was
+                                upregulated (11.1%), while eight were downregulated (88.9%).
+                                The median log2 fold change was −2.3138 and the mean was −1.8596.
+                                The term was therefore classified as predominantly downregulated.
+                                This indicates that trehalose-biosynthesis-associated genes were
+                                overrepresented among the salinity-responsive metabolic-enzyme
+                                genes, with most showing decreased transcript abundance.
+                                Ethylene biosynthetic process (GO:0009693) had a GeneRatio of
+                                19/864, with 112 background genes annotated to the term. Its
+                                RichFactor was 0.1696 and FoldEnrichment was 2.4382. The nominal
+                                p-value was 2.4411 × 10⁻⁴, with an adjusted p-value and q-value
+                                of 0.03900. Eighteen of the 19 contributing genes were
+                                upregulated (94.7%), while one was downregulated (5.3%).
+                                The median log2 fold change was 2.9599 and the mean was 3.4608.
+                                The term was classified as predominantly upregulated.
                             </p>
 
                             {/* METABOLIC GO ENRICHMENT FIGURE */}
@@ -1046,17 +947,18 @@ const ExerciseOne = () => {
                                 <div className="rl-enrichment-figure-image">
                                     <img
                                         src={img02}
-                                        alt="Bubble plot showing enriched metabolic biological processes under cold, drought, heat, and salinity stress in maize. Bubble position represents the negative logarithm of the adjusted p-value, bubble size represents DEG count, and bubble colour represents adjusted p-value."
+                                        alt="Heatmap showing the classification of genes associated with ethylene biosynthetic process (GO:0009693) under cold, drought, heat, and salinity stress. "
                                         loading="lazy"
                                     />
                                 </div>
 
                                 <figcaption className="rl-enrichment-figure-caption">
-                                    <strong>Figure 2.</strong> The heatmap compares the directional classification of genes associated with ethylene biosynthetic process (GO:0009693) and trehalose biosynthetic process (GO:0005992) under cold, drought, heat, and salinity stress. Upregulated and downregulated genes were
-                                    classified using the sign of their log2 fold change. Direction labels
-                                    were assigned descriptively using a 70% majority threshold. These
-                                    categories represent transcript-level patterns and do not directly
-                                    measure pathway activity or metabolite abundance.
+                                    <strong>Figure 2.</strong> The heatmap compares the classification of 
+                                    genes associated with ethylene biosynthetic process (GO:0009693)
+                                    under cold, drought, heat, and salinity stress.
+                                    The heatmap displays the log2 fold change of each gene across the 
+                                    four stress conditions, with colour indicating the direction and 
+                                    magnitude of expression change.
                                 </figcaption>
 
                             </figure>
@@ -1068,15 +970,23 @@ const ExerciseOne = () => {
                                 <div className="rl-enrichment-figure-image">
                                     <img
                                         src={img03}
-                                        alt="Bubble plot showing enriched metabolic biological processes under cold, drought, heat, and salinity stress in maize. Bubble position represents the negative logarithm of the adjusted p-value, bubble size represents DEG count, and bubble colour represents adjusted p-value."
+                                        alt="Bar plot showing the median log2 fold changes for differentially expressed genes associated with enriched metabolic biological processes under cold, drought, heat, and salinity stress."
                                         loading="lazy"
                                     />
                                 </div>
 
                                 <figcaption className="rl-enrichment-figure-caption">
-                                    <strong>Figure 3.</strong> The matrix indicates the stress
-                                    conditions in which each GO BP term reached the adjusted p-value
-                                    threshold.
+                                    <strong>Figure 3.</strong> Bars show median log2 fold changes
+                                    for differentially expressed genes associated with the
+                                    enriched metabolic biological processes under
+                                    cold (blue), drought (orange), heat (red), and salinity (green) stress.
+                                    The horizontal axis represents the median log2 fold change
+                                    of the contributing genes, while the vertical axis lists
+                                    the enriched processes. Bars are coloured according to the
+                                    directional classification of the contributing genes,
+                                    based on a 70% majority threshold. These results describe
+                                    transcript-level patterns and do not directly measure pathway
+                                    activity or metabolite abundance.
                                 </figcaption>
 
                             </figure>
@@ -1084,45 +994,19 @@ const ExerciseOne = () => {
                             <h4>Practice 2</h4>
 
                             <p>
-                                The rebuild audit reported 25,968 genes tested in each DESeq2
-                                contrast, using an adjusted p-value (padj) threshold of ≤ 0.05
-                                and an absolute log2 fold change of ≥ 1. The metabolic-enzyme
-                                annotation comprised 18,585 genes. Applying these criteria
-                                identified 598 metabolic-enzyme candidate genes under cold
-                                stress, 919 under drought, 1,599 under heat, and 840 under
-                                salinity. Of these candidates, 315 were upregulated and 283
-                                downregulated under cold stress; 467 were upregulated and 452
-                                downregulated under drought; 908 were upregulated and 691
-                                downregulated under heat; and 569 were upregulated and 271
-                                downregulated under salinity.
+                                The DESeq2 rebuild audit confirmed that 25,968 genes were tested 
+                                in each stress contrast, using an adjusted p-value (padj) 
+                                threshold of ≤ 0.05 and an absolute log₂ fold-change threshold 
+                                of ≥ 1. The rebuilt metabolic-enzyme annotation comprised 
+                                19,220 unique genes. Applying these criteria identified 
+                                616 metabolic-enzyme candidate genes under cold stress, 
+                                945 under drought, 1,657 under heat, and 864 under salinity. 
+                                Among these candidates, 323 were upregulated and 293 
+                                downregulated under cold stress; 478 were upregulated and 
+                                467 downregulated under drought; 948 were upregulated and 
+                                709 downregulated under heat; and 583 were upregulated and 
+                                281 downregulated under salinity.
                             </p>
-
-
-                            <figure className="rl-enrichment-figure">
-
-
-
-                                <div className="rl-enrichment-figure-image">
-                                    <img
-                                        src={img04}
-                                        alt="Bubble plot showing enriched metabolic biological processes under cold, drought, heat, and salinity stress in maize. Bubble position represents the negative logarithm of the adjusted p-value, bubble size represents DEG count, and bubble colour represents adjusted p-value."
-                                        loading="lazy"
-                                    />
-                                </div>
-
-                                <figcaption className="rl-enrichment-figure-caption">
-                                    <strong>Figure 4.</strong> Numbers and expression directions
-                                    of differentially expressed metabolic-enzyme candidate genes
-                                    identified under cold, drought, heat, and salinity stress.
-                                    Candidate genes met the adjusted p-value threshold of 0.05
-                                    and absolute log2 fold-change threshold of 1. Upregulated and
-                                    downregulated counts are based on the sign of the estimated
-                                    log2 fold change. The figure summarises candidate counts and
-                                    does not represent measured enzyme activity or metabolic flux.
-                                </figcaption>
-
-                            </figure>
-
 
 
                             <section className="rl-enrichment-table-section">
@@ -1236,43 +1120,46 @@ const ExerciseOne = () => {
                             </section>
 
                             <p>
-                                To connect the candidate-level results with the enrichment analysis,
-                                the metabolic-enzyme candidates were cross-referenced against the significantly
-                                enriched GO biological processes identified previously. This produced 184
-                                non-empty candidate–GO association records across the four stress conditions:
-                                20 under cold, 49 under drought, 46 under heat, and 69 under salinity.
-                                These values represent candidate–GO associations rather than unique genes,
-                                since an individual gene may be associated with more than one biological
-                                process or occur in multiple stress comparisons.
-                                Further comparison was performed to examine whether the biological
-                                processes enriched across multiple stress conditions were supported by
-                                shared differentially expressed genes. For ethylene biosynthesis (GO:0009693),
-                                35 unique genes were identified across cold, drought and salinity stress, of
-                                which 18 were differentially expressed in at least two conditions. These shared genes were Zm00001d002535, Zm00001d002576, Zm00001d002592, Zm00001d003504, Zm00001d003533, Zm00001d005936, Zm00001d009568, Zm00001d017457, Zm00001d017645, Zm00001d018122, Zm00001d021978, Zm00001d024843, Zm00001d024853, Zm00001d025524, Zm00001d026060, Zm00001d034418, Zm00001d036348 and Zm00001d052189. 
-                                Among these shared genes, 17 exhibited consistent expression directions
-                                across the conditions in which they were identified, while Zm00001d024843 showed
-                                a contrasting response, being downregulated under drought but upregulated
-                                under salinity. Trehalose biosynthesis (GO:0005992), which was enriched
-                                under drought and salinity stress, contained 10 unique associated genes,
-                                8 of which were shared between the two conditions. These were Zm00001d005658, Zm00001d005687, Zm00001d012748, Zm00001d018342, Zm00001d020272, Zm00001d020396, Zm00001d032311 and Zm00001d052060. All eight shared genes
-                                were consistently downregulated under both stresses.
-
+                                To connect the metabolic-enzyme candidate results with the 
+                                enrichment analysis, the candidates were cross-referenced against 
+                                the significantly enriched GO biological processes identified 
+                                under each stress condition. This produced 158 non-empty 
+                                candidate–GO association records across the four stress 
+                                conditions: 20 under cold, 15 under drought, 54 under heat, 
+                                and 69 under salinity. These records represent candidate–GO 
+                                associations rather than unique genes, as individual genes may 
+                                contribute to multiple biological-process associations or occur 
+                                across different stress comparisons. Further comparison examined 
+                                whether enriched biological processes identified under multiple 
+                                stress conditions were supported by shared differentially 
+                                expressed genes. Ethylene biosynthesis (GO:0009693), which was 
+                                significantly enriched under cold and salinity stress, contained 
+                                29 unique associated genes across the two conditions. Of these, 
+                                10 were shared between cold and salinity: Zm00001d002592, 
+                                Zm00001d003504, Zm00001d005936, Zm00001d017457, Zm00001d018122, 
+                                Zm00001d021978, Zm00001d024853, Zm00001d025524, Zm00001d026060, 
+                                and Zm00001d036348. All 10 shared genes exhibited consistent 
+                                expression directions across both conditions. Nine were 
+                                upregulated under both cold and salinity stress, while 
+                                Zm00001d036348 was downregulated under both conditions. 
+                                Thus, the shared ethylene-associated genes showed directional 
+                                consistency across the two stress conditions in which this 
+                                biological process was significantly enriched.
                             </p>
 
-                           
+
 
                             <p>
-                                Across the four stress comparisons, the analysis produced 3,956
-                                candidate–stress records representing 2,799 unique
-                                metabolic-enzyme candidate genes. 50 genes were detected as
-                                candidates in all four stress conditions; 185 were detected in
-                                three conditions, 637 in two conditions, and 1,927 in one condition.
-                                The candidate genes were ranked using adjusted p-values and absolute
-                                log2 fold changes to prioritise those showing stronger statistical
-                                evidence and larger expression changes. <strong>Table 3</strong> presents the five
-                                highest-ranked candidates for each stress condition, together with
-                                their gene identifiers, expression estimates, and associated GO
-                                molecular-function annotations. The selected candidates included
+                                Across the four stress comparisons, the analysis identified 4,082 
+                                candidate–stress records representing 2,885 unique metabolic-enzyme 
+                                candidate genes. Of these genes, 49 were identified across all four 
+                                stress conditions, 193 across three conditions, 664 across two conditions, 
+                                and 1,979 in only one condition. Candidate genes were ranked separately 
+                                for each stress using adjusted p-values in ascending order, followed 
+                                by absolute log₂ fold change in descending order. <strong>Table 3</strong> presents the 
+                                five highest-ranked candidates per stress, including their gene identifiers, 
+                                expression changes, regulation directions, and associated enzyme-related 
+                                molecular-function GO annotations. The selected candidates included
                                 both upregulated and downregulated genes, with some showing relatively
                                 large expression changes. Zm00001d042107 was among the
                                 highest-ranked candidates under both cold and salinity stress, with
@@ -1400,7 +1287,7 @@ const ExerciseOne = () => {
                                 as differentially expressed metabolic-enzyme-associated genes.
                             </p>
 
- <section className="rl-enrichment-table-section">
+                            <section className="rl-enrichment-table-section">
 
                                 <div className="rl-enrichment-table-heading">
                                     <span>TABLE 4</span>
@@ -1599,6 +1486,39 @@ const ExerciseOne = () => {
 
                             </figure>
 
+                        </div>
+
+                    </section>
+
+                    {/* TECHNICAL ISSUES */}
+
+                    <section
+                        className="rl-paper-section"
+                    >
+
+                        <div className="rl-section-title-area">
+
+                            <h2>Technical Issues</h2>
+
+                        </div>
+
+
+                        <div className="rl-content-placeholder">
+                            <p>
+                                During the analysis, several technical issues were identified
+                                and corrected to improve the reliability and reproducibility
+                                of the results. These included incorrect handling of Gene
+                                Association File (GAF) qualifiers, particularly NOT annotations;
+                                incomplete resolution of alternative and obsolete Gene Ontology
+                                (GO) identifiers; insufficient propagation of valid GO
+                                annotations through the is_a and part_of relationships;
+                                and inconsistencies in the construction of the metabolic-enzyme
+                                gene set and enrichment background. The GO enrichment
+                                procedure was also corrected to ensure that multiple-testing
+                                adjustment accounted for all eligible GO terms, including
+                                terms with no overlap with the differentially expressed gene
+                                sets.
+                            </p>
                         </div>
 
                     </section>
